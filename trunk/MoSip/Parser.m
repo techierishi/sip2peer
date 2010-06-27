@@ -3,6 +3,8 @@
 //  StringTest
 //
 //  Created by Marco Picone on 09/06/09.
+//  Copyright 2010 Marco Picone ( http://dsg.ce.unipr.it ) - University of Parma - Italy. 
+//  All rights reserved.
 //
 
 #import "Parser.h"
@@ -570,6 +572,9 @@
 /** Gets a string of length len and move over. */
 -(NSString*) getStringOfLenght:(int)len
 {  
+	if(len<0)
+		return nil;
+		
 	int start=index;
 	index=start+len;
 	

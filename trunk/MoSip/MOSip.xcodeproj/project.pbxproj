@@ -239,7 +239,7 @@
 		08FB7793FE84155DC02AAC07 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				ORGANIZATIONNAME = "Marco Picone (dsg.ce.unipr.it)";
+				ORGANIZATIONNAME = "Marco Picone (dsg.ce.unipr.it) - University Of Parma - Italy";
 			};
 			buildConfigurationList = 1DEB927808733DD40010E9CD /* Build configuration list for PBXProject "MOSip" */;
 			compatibilityVersion = "Xcode 3.2";

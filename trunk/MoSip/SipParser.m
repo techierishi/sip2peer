@@ -2,8 +2,9 @@
 //  SipParser.m
 //  MOSip
 //
-//  Created by marcopk on 27/04/10.
-//  Copyright 2010 __MyCompanyName__. All rights reserved.
+//  Created by Marco Picone on 27/04/10.
+//  Copyright 2010 Marco Picone ( http://dsg.ce.unipr.it ) - University of Parma - Italy. 
+//  All rights reserved.
 //
 
 #import "SipParser.h"
@@ -293,8 +294,11 @@
 {  
 	NSString* version = [self getStringOfLenght:4];     
 	
+	NSLog(@"DEBUG: getStatusLine() Version: %@",version);
+	
 	if (![version isEqualToString:@"SIP/"]) 
 	{  
+		NSLog(@"DEBUG: getStatusLine() VERSION NOT EQUAL TO SIP/");
 		index=[str length]; 
 		return nil;  
 	} 
@@ -366,11 +370,12 @@
 	
 	int begin_url=range.location;
 	
-	NSLog(@"DEBUG: inside parseNameAddress(): str=%@",[self getRemainingString]);
 	NSLog(@"DEBUG: inside parseNameAddress(): index=%d",begin_url);
 	
 	if (begin_url<0) 
-	{  
+	{
+		NSLog(@"DEBUG: Begin URL < 0");
+		
 		url = [self getSipURL];
 		
 		if (url==nil){  
@@ -383,6 +388,10 @@
 	}
 	else
 	{  
+		NSLog(@"DEBUG: Begin URL >= 0");
+		NSLog(@"DEBUG: inside parseNameAddress(): begin=%d",begin);	
+		NSLog(@"DEBUG: inside parseNameAddress(): Len=%d",begin_url-begin);	
+		
 		text = [self getStringOfLenght:(begin_url-begin)];
 		text = [text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
 
@@ -398,6 +407,7 @@
 			return [[NameAddress alloc] initWithSipUrl:url];
 		else 
 			return [[NameAddress alloc] initWithName:text andSipUrl:url]; 
+		
 	}
 	
 	return nil;

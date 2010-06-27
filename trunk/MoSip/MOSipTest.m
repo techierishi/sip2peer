@@ -224,18 +224,16 @@ int main (int argc, const char * argv[]) {
 
 	SipParser* sipParser = [[SipParser alloc] initWithString:@"MESSAGE sip:echo@zoopera.com SIP/2.0\nVia: SIP/2.0/UDP 127.0.0.77:5077;rport;branch=z9hG4bK19524\nMax-Forwards: 70\nTo: <sip:echo@zoopera.com>\nFrom: \"user\" <sip:user@127.0.0.77:5077>;tag=z9hG4bK31991716\nCall-ID: 217226008925@127.0.0.77\nCSeq: 1 MESSAGE\nExpires: 3600\nUser-Agent: mjsip stack 1.6\nContent-Length: 4\nContent-Type: application/text\n\nciao"];
 	NSLog(@"\n%@\n",[sipParser str]);
-	
 	NSLog(@"Get Request Line --> %@ ",[[sipParser getRequestLine] toString]); //OK !
-	
-	
-	Header* header = [sipParser getHeader:@"Via"];
-	NSLog(@"Header Via: %@ value:%@",[header name],[header value]);
 	
 	StatusLine* statusLine = [sipParser getStatusLine];
 	NSLog(@"Get Status Line --> Code:%d Reason:%@ ",[statusLine code],[statusLine reason]);
 	
-	//NameAddress* nameAddr = [sipParser getNameAddress];
-	//NSLog(@"Get Name Address --> Name:%@ URL:%@ ",[nameAddr name],[[nameAddr url] toString]);
+	Header* header = [sipParser getHeader:@"Via"];
+	NSLog(@"Header Via: %@ value:%@",[header name],[header value]);
+	 
+	NameAddress* nameAddr = [sipParser getNameAddress];
+	NSLog(@"Get Name Address --> Name:%@ URL:%@ ",[nameAddr name],[[nameAddr url] toString]);
 	 
 	NSLog(@"/*********************************************************************************/");
 	

@@ -2,8 +2,9 @@
 //  SipURL.h
 //  StringTest
 //
-//  Created by marcopk on 09/06/09.
-//  Copyright 2009 __MyCompanyName__. All rights reserved.
+//  Created by Marco Picone on 09/06/09.
+//  Copyright 2010 Marco Picone ( http://dsg.ce.unipr.it ) - University of Parma - Italy. 
+//  All rights reserved.
 //
 
 #import <Cocoa/Cocoa.h>

@@ -2,8 +2,9 @@
 //  SIPDelimiter.m
 //  MOSip
 //
-//  Created by marcopk on 19/06/10.
-//  Copyright 2010 Marco Picone. All rights reserved.
+//  Created by Marco Picone on 19/06/10.
+//  Copyright 2010 Marco Picone ( http://dsg.ce.unipr.it ) - University of Parma - Italy. 
+//  All rights reserved.
 //
 
 #import "SIPDelimiter.h"

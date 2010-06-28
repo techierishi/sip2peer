@@ -238,10 +238,10 @@ int main (int argc, const char * argv[]) {
 	//NSString* params = [sipParser getParameter:@"rport"];
 	//NSLog(@"Get Parameters --> Reason:%@ ",params);
 	
-	NSArray* params = [sipParser getParameterNames];
+	//NSArray* params = [sipParser getParameterNames];
 	
-	for(int i=0; i<[params count]; i++)
-		NSLog(@"Param[%d]:%@",i,[params objectAtIndex:i]);
+	//for(int i=0; i<[params count]; i++)
+	//	NSLog(@"Param[%d]:%@",i,[params objectAtIndex:i]);
 	
 	//NSLog(@"HasParameter ---> Reason ? %@", ([sipParser hasParameter:@"rport"] ? @"YES" : @"NO"));
 	

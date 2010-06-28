@@ -592,6 +592,8 @@
 /** Gets a string of chars separated by any of chars of separators */
 -(NSString*) getWord:(char[])separators withSize:(int)size
 {  
+	NSLog(@"DEBUG: getWord() ----> CALLED !");
+	
 	int begin=index;
 	
 	while (begin< [str length] && [self isChar:[str characterAtIndex:begin] AnyOfArray:separators withSize:size]) 
@@ -604,6 +606,7 @@
 	
 	index = end;
 
+	NSLog(@"DEBUG: getWord() ----> begin:%d end:%d !",begin,end);
 	
 	return [str substringWithRange:NSMakeRange(begin,end-begin)];
 }

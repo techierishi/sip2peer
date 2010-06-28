@@ -17,6 +17,7 @@
 #define SEPARATOR_SIZE 19
 #define URI_SEPARATORS_SIZE 4
 #define URI_SCHEMES_SIZE 2
+#define PARAM_SEPARATORS_SIZE 6
 
 @interface SIPDelimiter : NSObject {
 
@@ -42,6 +43,9 @@
 	
 	NSString* *URI_SCHEMES;//={@"sip:",@"sips:"};
 	
+	/** PARAM SEPARATOR char[], composed by: ' ', '=', ';', ',', '\n', '\r' */  
+	char *PARAM_SEPARATORS;//={' ', '=', ';', ',', '\n', '\r'};
+	
 	
 }
 
@@ -53,5 +57,6 @@
 @property char* SEPARATOR;
 @property char* URI_SEPARATORS;
 @property NSString* *URI_SCHEMES;
+@property char* PARAM_SEPARATORS;
 
 @end

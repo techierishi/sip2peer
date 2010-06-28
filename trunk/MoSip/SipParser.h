@@ -14,6 +14,7 @@
 #import "RequestLine.h"
 #import "StatusLine.h"
 #import "NameAddress.h"
+#import "Message.h"
 
 @interface SipParser : Parser {
 }
@@ -80,5 +81,28 @@
  * A NameAddress is a string of the form of:
  * <BR><BLOCKQUOTE><PRE>&nbsp&nbsp "user's name" &lt;sip url&gt; </PRE></BLOCKQUOTE> */
 -(NameAddress*) getNameAddress;
+
+/** Gets the value of specified parameter.
+ * @returns the parameter value or null if parameter does not exist or doesn't have a value (i.e. in case of flag parameter). */
+-(NSString*) getParameter:(NSString*) name;
+
+/** Gets a String Vector of parameter names.
+ * @return Returns a String Vector of all parameter names or null if no parameter is present. */
+-(NSArray*) getParameterNames;
+
+/** Whether there is the specified parameter */
+-(BOOL) hasParameter:(NSString*)name;
+
+/** Finds the first comma-separator. Return -1 if no comma is found. */
+-(int) indexOfCommaHeaderSeparator;
+
+/** Goes to the first comma-separator. Goes to the end of string if no comma is found. */
+-(SipParser*) goToCommaHeaderSeparator;
+
+
+/** Gets the first SIP message (all bytes until the first end of SIP message),
+ * if a SIP message delimiter is found.
+ * <p>The message begins from the first non-CRLF char. */
+-(Message*) getSipMessage;
 
 @end

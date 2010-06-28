@@ -223,19 +223,41 @@ int main (int argc, const char * argv[]) {
 	NSLog(@"/************************* TESTING SIP PARSER CLASS **********************************/");
 
 	SipParser* sipParser = [[SipParser alloc] initWithString:@"MESSAGE sip:echo@zoopera.com SIP/2.0\nVia: SIP/2.0/UDP 127.0.0.77:5077;rport;branch=z9hG4bK19524\nMax-Forwards: 70\nTo: <sip:echo@zoopera.com>\nFrom: \"user\" <sip:user@127.0.0.77:5077>;tag=z9hG4bK31991716\nCall-ID: 217226008925@127.0.0.77\nCSeq: 1 MESSAGE\nExpires: 3600\nUser-Agent: mjsip stack 1.6\nContent-Length: 4\nContent-Type: application/text\n\nciao"];
-	NSLog(@"\n%@\n",[sipParser str]);
-	NSLog(@"Get Request Line --> %@ ",[[sipParser getRequestLine] toString]); //OK !
+	//NSLog(@"\n%@\n",[sipParser str]);
+	//NSLog(@"Get Request Line OO--> %@ ",[[sipParser getRequestLine] toString]); //OK !
 	
-	StatusLine* statusLine = [sipParser getStatusLine];
-	NSLog(@"Get Status Line --> Code:%d Reason:%@ ",[statusLine code],[statusLine reason]);
+	//StatusLine* statusLine = [sipParser getStatusLine];
+	//NSLog(@"Get Status Line --> Code:%d Reason:%@ ",[statusLine code],[statusLine reason]);
 	
-	Header* header = [sipParser getHeader:@"Via"];
-	NSLog(@"Header Via: %@ value:%@",[header name],[header value]);
+	//Header* header = [sipParser getHeader:@"Via"];
+	//NSLog(@"Header Via: %@ value:%@",[header name],[header value]);
 	 
-	NameAddress* nameAddr = [sipParser getNameAddress];
-	NSLog(@"Get Name Address --> Name:%@ URL:%@ ",[nameAddr name],[[nameAddr url] toString]);
-	 
+	//NameAddress* nameAddr = [sipParser getNameAddress];
+	//NSLog(@"Get Name Address --> Name:%@ URL:%@ ",[nameAddr name],[[nameAddr url] toString]);
+
+	//NSString* params = [sipParser getParameter:@"rport"];
+	//NSLog(@"Get Parameters --> Reason:%@ ",params);
+	
+	NSArray* params = [sipParser getParameterNames];
+	
+	for(int i=0; i<[params count]; i++)
+		NSLog(@"Param[%d]:%@",i,[params objectAtIndex:i]);
+	
+	//NSLog(@"HasParameter ---> Reason ? %@", ([sipParser hasParameter:@"rport"] ? @"YES" : @"NO"));
+	
+	//NSLog(@"indexOfCommaHeaderSeparator ---> Reason: %d", ([sipParser indexOfCommaHeaderSeparator]));
+
+	//NSLog(@"goToCommaHeaderSeparator ---> Reason: %d", ([sipParser goToCommaHeaderSeparator]));
+	
+	
 	NSLog(@"/*********************************************************************************/");
+	
+	
+	
+	
+	
+	
+	
 	
 	/****************************************************************************************/
 		

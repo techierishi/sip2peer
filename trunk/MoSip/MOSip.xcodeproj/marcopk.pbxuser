@@ -132,6 +132,9 @@
 			35275EC511D8C1CB00EC3B32 /* PBXTextBookmark */ = 35275EC511D8C1CB00EC3B32 /* PBXTextBookmark */;
 			35275EC611D8C1CB00EC3B32 /* PBXBookmark */ = 35275EC611D8C1CB00EC3B32 /* PBXBookmark */;
 			35275EC711D8C1CB00EC3B32 /* PBXTextBookmark */ = 35275EC711D8C1CB00EC3B32 /* PBXTextBookmark */;
+			35275ED611D8C21B00EC3B32 /* PBXTextBookmark */ = 35275ED611D8C21B00EC3B32 /* PBXTextBookmark */;
+			35275ED711D8C21B00EC3B32 /* PBXTextBookmark */ = 35275ED711D8C21B00EC3B32 /* PBXTextBookmark */;
+			35275ED811D8C21B00EC3B32 /* PBXTextBookmark */ = 35275ED811D8C21B00EC3B32 /* PBXTextBookmark */;
 			3555AF7911CD049400C2FEBC = 3555AF7911CD049400C2FEBC /* PBXTextBookmark */;
 			355C402B11D8BEBA0047EF17 = 355C402B11D8BEBA0047EF17 /* PBXTextBookmark */;
 			355C402C11D8BEBA0047EF17 = 355C402C11D8BEBA0047EF17 /* PBXTextBookmark */;
@@ -348,6 +351,36 @@
 		vrLen = 1583;
 		vrLoc = 2934;
 	};
+	35275ED611D8C21B00EC3B32 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 35890E5B1186E775008A5BBB /* SipProvider.m */;
+		name = "SipProvider.m: 5";
+		rLen = 0;
+		rLoc = 61;
+		rType = 0;
+		vrLen = 255;
+		vrLoc = 0;
+	};
+	35275ED711D8C21B00EC3B32 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 35890E581186E768008A5BBB /* SipParser.m */;
+		name = "SipParser.m: 571";
+		rLen = 0;
+		rLoc = 13790;
+		rType = 0;
+		vrLen = 1474;
+		vrLoc = 8545;
+	};
+	35275ED811D8C21B00EC3B32 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 35890E581186E768008A5BBB /* SipParser.m */;
+		name = "SipParser.m: 571";
+		rLen = 0;
+		rLoc = 13790;
+		rType = 0;
+		vrLen = 1360;
+		vrLoc = 12430;
+	};
 	3555AEC011CCF67100C2FEBC /* SIPDelimiter.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1333, 819}}";
@@ -496,9 +529,9 @@
 	};
 	35890E581186E768008A5BBB /* SipParser.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1333, 5434}}";
-			sepNavSelRange = "{0, 0}";
-			sepNavVisRange = "{2934, 1583}";
+			sepNavIntBoundsRect = "{{0, 0}, {1333, 7410}}";
+			sepNavSelRange = "{13790, 0}";
+			sepNavVisRange = "{12430, 1360}";
 		};
 	};
 	35890E5A1186E775008A5BBB /* SipProvider.h */ = {
@@ -510,7 +543,7 @@
 	};
 	35890E5B1186E775008A5BBB /* SipProvider.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1573, 914}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1333, 788}}";
 			sepNavSelRange = "{61, 0}";
 			sepNavVisRange = "{0, 255}";
 		};

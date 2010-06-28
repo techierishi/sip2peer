@@ -370,11 +370,11 @@
 	
 	int begin_url=range.location;
 	
-	NSLog(@"DEBUG: inside parseNameAddress(): index=%d",begin_url);
+	//NSLog(@"DEBUG: inside parseNameAddress(): index=%d",begin_url);
 	
 	if (begin_url<0) 
 	{
-		NSLog(@"DEBUG: Begin URL < 0");
+		//NSLog(@"DEBUG: Begin URL < 0");
 		
 		url = [self getSipURL];
 		
@@ -388,9 +388,9 @@
 	}
 	else
 	{  
-		NSLog(@"DEBUG: Begin URL >= 0");
-		NSLog(@"DEBUG: inside parseNameAddress(): begin=%d",begin);	
-		NSLog(@"DEBUG: inside parseNameAddress(): Len=%d",begin_url-begin);	
+		//NSLog(@"DEBUG: Begin URL >= 0");
+		//NSLog(@"DEBUG: inside parseNameAddress(): begin=%d",begin);	
+		//NSLog(@"DEBUG: inside parseNameAddress(): Len=%d",begin_url-begin);	
 		
 		text = [self getStringOfLenght:(begin_url-begin)];
 		text = [text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
@@ -413,5 +413,158 @@
 	return nil;
 }
 
+/** Gets the value of specified parameter.
+ * @returns the parameter value or null if parameter does not exist or doesn't have a value (i.e. in case of flag parameter). */
+-(NSString*) getParameter:(NSString*)name
+{
+	while ([self hasMore])
+	{
+		if ([[self getWord:[[[SIPDelimiter alloc] init] PARAM_SEPARATORS] withSize:PARAM_SEPARATORS_SIZE] isEqualToString: name]==YES)
+		{   
+			[self skipWSP];
+			if ([self nextChar] == '=')
+			{
+				[self skipChar];
+				return [self getWordSkippingQuoted:[[[SIPDelimiter alloc] init] PARAM_SEPARATORS] withSize:PARAM_SEPARATORS_SIZE];
+			}
+			else 
+				return nil;
+			
+			[self goToSkippingQuoted:';'];
+			if ([self hasMore])
+				[self skipChar];
+		}		
+	}
+	return nil;
+}
+
+/** Gets a String Vector of parameter names.
+ * @return Returns a String Vector of all parameter names or null if no parameter is present. */
+-(NSArray*) getParameterNames
+{
+	
+	//NSLog(@"DEBUG: getParameterNames() ---> CALLED !");
+	
+	NSMutableArray* params = [[NSMutableArray alloc] init];
+    NSString* name;
+	
+	while ([self hasMore])
+	{
+		//NSLog(@"DEBUG: hasMore");
+		
+		name = [self getWord:[[[SIPDelimiter alloc] init] PARAM_SEPARATORS] withSize:PARAM_SEPARATORS_SIZE];
+		
+		//NSLog(@"DEBUG: Name:%@",name);
+		
+		if ([name length] > 0)
+		{
+			[params addObject:name];
+			//NSLog(@"DEBUG: Object Added !");
+		}
+		
+		
+		[self goToSkippingQuoted:';'];
+		
+		if ([self hasMore])
+			[self skipChar];
+	}
+	
+	//NSLog(@"DEBUG: returning params with size: %d", [params count]);
+	
+	return params;
+}
+
+/** Whether there is the specified parameter */
+-(BOOL) hasParameter:(NSString*)name
+{
+	while ([self hasMore])
+	{
+		if ([[self getWord:[[[SIPDelimiter alloc] init] PARAM_SEPARATORS] withSize:PARAM_SEPARATORS_SIZE] isEqualToString: name]==YES)
+			return true;
+		[self goToSkippingQuoted:';'];
+		if ([self hasMore])
+			[self skipChar];
+	}	
+	return false;
+}
+
+/** Finds the first comma-separator. Return -1 if no comma is found. */
+-(int) indexOfCommaHeaderSeparator
+{
+	BOOL inside_quoted_string = false;
+	for (int i=index; i< [self length]; i++)
+	{   
+		char c = [self charAt:i];
+		if (c == '"')
+			inside_quoted_string =! inside_quoted_string;
+		if (!inside_quoted_string && c== ',')
+			return i;
+	}
+	return -1;
+}
+
+//DA TESTARE
+/** Goes to the first comma-separator. Goes to the end of string if no comma is found. */
+-(SipParser*) goToCommaHeaderSeparator
+{
+	int comma = [self indexOfCommaHeaderSeparator];
+	if (comma < 0)
+		index = [self length];
+	else 
+		index = comma;
+	return self;
+
+}
+
+
+/** Gets the first SIP message (all bytes until the first end of SIP message),
+ * if a SIP message delimiter is found.
+ * <p>The message begins from the first non-CRLF char. */
+-(Message*) getSipMessage
+{
+	/*
+	[self skipCRLF];
+	NSString* text;
+	if (self.index == 0)
+		//test = self;
+		return 0;
+	else 
+		text = [self getRemainingString];
+	*/
+	
+	return nil;
+}
+
+ /*
+public Message getSipMessage()
+{  // skip any CRLF sequence
+	skipCRLF();
+	// Get content length; if no Content-Length header found return null
+	String text;
+	if (getPos()==0) text=str; else text=getRemainingString();
+	Message msg=new Message(text);
+	if (!msg.hasHeader(Header.H_ContentLength)) return null;
+	int body_len=Integer.parseInt(msg.getHeader(Header.H_ContentLength).getValue());
+	
+	// gets the message (and go ahead), or returns null
+	int begin=getPos();
+	goToEndOfLastHeader();
+	if (!hasMore()) return null;
+	goTo('\n');
+	if (!hasMore()) return null;
+	skipChar().goTo('\n'); // skip the LF of last header and go the the new line
+	if (!hasMore()) return null;
+	int body_pos=skipChar().getPos(); // skip the LF of the empty line and go the the body
+	
+	int end=body_pos+body_len;
+	if (end<=str.length())
+	{  index=end;
+		return new Message(str.substring(begin,end));
+	}
+	else return null;
+}
+}
+*/
+ 
 
 @end

@@ -12,4 +12,27 @@
 
 @implementation Message
 
+@synthesize request_line;
+@synthesize status_line;
+@synthesize body;
+@synthesize headers;
+
+
+
+/** Creates new message from String */
+-(id) initWithStringMessage: (NSString*) s
+{
+	
+	
+}
+
+
+/** Creates a new Message */ 
+-(id) initWithMessage:(Message*)msg
+{
+
+}
+
+
+
 @end

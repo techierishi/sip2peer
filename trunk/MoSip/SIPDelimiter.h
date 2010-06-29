@@ -44,8 +44,17 @@
 	NSString* *URI_SCHEMES;//={@"sip:",@"sips:"};
 	
 	/** PARAM SEPARATOR char[], composed by: ' ', '=', ';', ',', '\n', '\r' */  
-	char *PARAM_SEPARATORS;//={' ', '=', ';', ',', '\n', '\r'};
+	char *PARAM_SEPARATORS;//={' ', '=', ';', ',', '\n', '\r'};	
 	
+	NSString *SIP_VERSION; 
+	NSString *INVITE;
+	NSString *CANCEL;
+	NSString *ACK;
+	NSString *BYE;
+	NSString *REGISTER;
+	NSString *SUBSCRIBE;
+	NSString *NOTIFY;
+	NSString *MESSAGE;
 	
 }
 
@@ -58,5 +67,14 @@
 @property char* URI_SEPARATORS;
 @property NSString* *URI_SCHEMES;
 @property char* PARAM_SEPARATORS;
+@property (nonatomic, retain) NSString *SIP_VERSION;
+@property (nonatomic, retain) NSString *INVITE;
+@property (nonatomic, retain) NSString *CANCEL;
+@property (nonatomic, retain) NSString *ACK;
+@property (nonatomic, retain) NSString *BYE;
+@property (nonatomic, retain) NSString *REGISTER;
+@property (nonatomic, retain) NSString *SUBSCRIBE;
+@property (nonatomic, retain) NSString *NOTIFY;
+@property (nonatomic, retain) NSString *MESSAGE;
 
 @end

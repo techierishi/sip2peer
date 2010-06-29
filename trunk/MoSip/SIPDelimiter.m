@@ -22,6 +22,16 @@
 @synthesize URI_SEPARATORS;
 @synthesize URI_SCHEMES;
 @synthesize PARAM_SEPARATORS;
+@synthesize SIP_VERSION;
+@synthesize INVITE;
+@synthesize CANCEL;
+@synthesize ACK;
+@synthesize BYE;
+@synthesize REGISTER;
+@synthesize SUBSCRIBE;
+@synthesize NOTIFY;
+@synthesize MESSAGE;
+
 
 
 /** Creates a void Header. */
@@ -32,6 +42,17 @@
 	{	
 		//NSLog(@"SIPDelimiter Init ...");
 		
+		[self setSIP_VERSION:@"SIP/"];
+		[self setINVITE:@"INVITE"];
+		[self setCANCEL:@"CANCEL"];
+		[self setACK:@"ACK"];
+		[self setBYE:@"BYE"];
+		[self setREGISTER:@"REGISTER"];
+		[self setNOTIFY:@"NOTIFY"];
+		[self setSUBSCRIBE:@"SUBSCRIBE"];
+		[self setMESSAGE:@"MESSAGE"];
+		
+		
 		char wspValues[2]={' ','\t'};
 		char crlfValues[2]={'\r','\n'};
 		char wspcrlf[4]={' ','\t','\r','\n'};
@@ -41,6 +62,8 @@
 		char uri_separatorsValues[4]={' ','>','\n','\r'};		
 		NSString* uri_schemesValues[]={@"sip:",@"sips:"};
 		char param_separatorsValues[6]={' ','=',';',',','\n','\r'};
+
+		
 		
 		self.WSP = (char*)malloc(WSP_SIZE);
 		memcpy(self.WSP, wspValues, WSP_SIZE);

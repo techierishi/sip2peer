@@ -1,7 +1,7 @@
 TMoSip
 v7
 r0
-t299418406.656640
+t299501590.155682
 cCheck dependencies
 cProcessPCH /var/folders/Fm/FmNVbg+dGfSWyPnDDLgP0++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/MOSip_Prefix-eqcdyjxqimbcycaqiylcfvzqssbp/MOSip_Prefix.pch.gch MOSip_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
 cCompileC build/MOSip.build/Debug/MoSip.build/Objects-normal/i386/MOSipTest.o /Users/antonello/Documents/MoSip/MOSipTest.m normal i386 objective-c com.apple.compilers.gcc.4_2
@@ -84,15 +84,17 @@ s162
 i<Foundation/Foundation.h>
 
 N/Users/antonello/Documents/MoSip/Message.h
-c000000004C288B210000000000000108
-t1277725473
-s264
+c000000004C29D05400000000000002FE
+t1277808724
+s766
 i<Cocoa/Cocoa.h>
+i"StatusLine.h"
+i"RequestLine.h"
 
 N/Users/antonello/Documents/MoSip/Message.m
-c000000004C288B2100000000000000F8
-t1277725473
-s248
+c000000004C29D09500000000000001FB
+t1277808789
+s507
 i"Message.h"
 
 N/Users/antonello/Documents/MoSip/MutableString.h
@@ -148,15 +150,15 @@ s1459
 i"RequestLine.h"
 
 N/Users/antonello/Documents/MoSip/SIPDelimiter.h
-c000000004C288B21000000000000060B
-t1277725473
-s1547
+c000000004C29BF5E0000000000000872
+t1277804382
+s2162
 i<Cocoa/Cocoa.h>
 
 N/Users/antonello/Documents/MoSip/SIPDelimiter.m
-c000000004C288B2100000000000007E0
-t1277725473
-s2016
+c000000004C29BE7D00000000000009B5
+t1277804157
+s2485
 i"SIPDelimiter.h"
 
 N/Users/antonello/Documents/MoSip/SipKeedAlive.h
@@ -252,8 +254,8 @@ s1035
 i"StatusLine.h"
 
 N/Users/antonello/Documents/MoSip/build/Debug/MoSip
-t1277725606
-s85972
+t1277808790
+s93404
 
 N/Users/antonello/Documents/MoSip/build/MOSip.build/Debug/MoSip.build/Objects-normal/i386/Header.o
 t1277725604
@@ -264,12 +266,12 @@ t1277725603
 s10128
 
 N/Users/antonello/Documents/MoSip/build/MOSip.build/Debug/MoSip.build/Objects-normal/i386/MOSipTest.o
-t1277725603
+t1277808725
 s30620
 
 N/Users/antonello/Documents/MoSip/build/MOSip.build/Debug/MoSip.build/Objects-normal/i386/Message.o
-t1277725603
-s4752
+t1277808790
+s9716
 
 N/Users/antonello/Documents/MoSip/build/MOSip.build/Debug/MoSip.build/Objects-normal/i386/MoSip.LinkFileList
 c000000004C288B9F000000000000066C
@@ -281,28 +283,28 @@ t1277725603
 s9388
 
 N/Users/antonello/Documents/MoSip/build/MOSip.build/Debug/MoSip.build/Objects-normal/i386/NameAddress.o
-t1277725604
+t1277808725
 s12264
 
 N/Users/antonello/Documents/MoSip/build/MOSip.build/Debug/MoSip.build/Objects-normal/i386/Parser.o
-t1277725603
-s50440
+t1277804383
+s50604
 
 N/Users/antonello/Documents/MoSip/build/MOSip.build/Debug/MoSip.build/Objects-normal/i386/RequestLine.o
 t1277725604
 s11880
 
 N/Users/antonello/Documents/MoSip/build/MOSip.build/Debug/MoSip.build/Objects-normal/i386/SIPDelimiter.o
-t1277725605
-s15944
+t1277804383
+s23804
 
 N/Users/antonello/Documents/MoSip/build/MOSip.build/Debug/MoSip.build/Objects-normal/i386/SipKeedAlive.o
 t1277725605
 s4776
 
 N/Users/antonello/Documents/MoSip/build/MOSip.build/Debug/MoSip.build/Objects-normal/i386/SipParser.o
-t1277725605
-s34212
+t1277808725
+s34460
 
 N/Users/antonello/Documents/MoSip/build/MOSip.build/Debug/MoSip.build/Objects-normal/i386/SipProvider.o
 t1277725605
@@ -900,7 +902,7 @@ s41744368
 
 CCheck dependencies
 r0
-lSLF07#2@18"Check dependencies299418399#299418399#0(0"0(0#1#0"7947009927035180032#0"0#
+lSLF07#2@18"Check dependencies299501589#299501589#0(0"0(0#1#0"4300885448#0"0#
 
 CCompileC build/MOSip.build/Debug/MoSip.build/Objects-normal/i386/Header.o /Users/antonello/Documents/MoSip/Header.m normal i386 objective-c com.apple.compilers.gcc.4_2
 s299418404.386477
@@ -981,8 +983,8 @@ xcom.apple.compilers.gcc.4_2
 lSLF07#2@82"Compile /Users/marcopk/Desktop/ObjC-XCode/workspace/MoSip/ImmutableMutableString.m299320195#299320196#0(0"0(0#0#74"/Users/marcopk/Desktop/ObjC-XCode/workspace/MoSip/ImmutableMutableString.m4300885448#1559"    cd /Users/marcopk/Desktop/ObjC-XCode/workspace/MoSip    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.5.sdk -mfix-and-continue -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/marcopk/Desktop/ObjC-XCode/workspace/MoSip/build/MOSip.build/Debug/MoSip.build/MoSip-generated-files.hmap -I/Users/marcopk/Desktop/ObjC-XCode/workspace/MoSip/build/MOSip.build/Debug/MoSip.build/MoSip-own-target-headers.hmap -I/Users/marcopk/Desktop/ObjC-XCode/workspace/MoSip/build/MOSip.build/Debug/MoSip.build/MoSip-all-target-headers.hmap -iquote /Users/marcopk/Desktop/ObjC-XCode/workspace/MoSip/build/MOSip.build/Debug/MoSip.build/MoSip-project-headers.hmap -F/Users/marcopk/Desktop/ObjC-XCode/workspace/MoSip/build/Debug -I/Users/marcopk/Desktop/ObjC-XCode/workspace/MoSip/build/Debug/include -I/Users/marcopk/Desktop/ObjC-XCode/workspace/MoSip/build/MOSip.build/Debug/MoSip.build/DerivedSources/i386 -I/Users/marcopk/Desktop/ObjC-XCode/workspace/MoSip/build/MOSip.build/Debug/MoSip.build/DerivedSources -include /var/folders/SJ/SJ3zCXhHEgi78A2clxxvmk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/MOSip_Prefix-fihwfwzblnlcfiepwefkpufcnoos/MOSip_Prefix.pch -c /Users/marcopk/Desktop/ObjC-XCode/workspace/MoSip/ImmutableMutableString.m -o /Users/marcopk/Desktop/ObjC-XCode/workspace/MoSip/build/MOSip.build/Debug/MoSip.build/Objects-normal/i386/ImmutableMutableString.o0#
 
 CCompileC build/MOSip.build/Debug/MoSip.build/Objects-normal/i386/MOSipTest.o /Users/antonello/Documents/MoSip/MOSipTest.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s299418402.658236
-e299418403.230281
+s299501524.863488
+e299501525.515772
 r1
 xCompileC
 xbuild/MOSip.build/Debug/MoSip.build/Objects-normal/i386/MOSipTest.o
@@ -993,7 +995,7 @@ xobjective-c
 xcom.apple.compilers.gcc.4_2
 o/Users/antonello/Documents/MoSip/MOSipTest.m: In function 'main':
 o/Users/antonello/Documents/MoSip/MOSipTest.m:225: warning: unused variable 'sipParser'
-lSLF07#2@52"Compile /Users/antonello/Documents/MoSip/MOSipTest.m299418402#299418403#0(153"/Users/antonello/Documents/MoSip/MOSipTest.m: In function 'main':/Users/antonello/Documents/MoSip/MOSipTest.m:225: warning: unused variable 'sipParser'1(22@27"Unused variable 'sipParser'299418403#66#87#0(6@44"/Users/antonello/Documents/MoSip/MOSipTest.m299418399#225#0#225#0#19"unused variable '*'0(0#0#44"/Users/antonello/Documents/MoSip/MOSipTest.m4049696142338911744#1346"    cd /Users/antonello/Documents/MoSip    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.5.sdk -mfix-and-continue -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/antonello/Documents/MoSip/build/MOSip.build/Debug/MoSip.build/MoSip-generated-files.hmap -I/Users/antonello/Documents/MoSip/build/MOSip.build/Debug/MoSip.build/MoSip-own-target-headers.hmap -I/Users/antonello/Documents/MoSip/build/MOSip.build/Debug/MoSip.build/MoSip-all-target-headers.hmap -iquote /Users/antonello/Documents/MoSip/build/MOSip.build/Debug/MoSip.build/MoSip-project-headers.hmap -F/Users/antonello/Documents/MoSip/build/Debug -I/Users/antonello/Documents/MoSip/build/Debug/include -I/Users/antonello/Documents/MoSip/build/MOSip.build/Debug/MoSip.build/DerivedSources/i386 -I/Users/antonello/Documents/MoSip/build/MOSip.build/Debug/MoSip.build/DerivedSources -include /var/folders/Fm/FmNVbg+dGfSWyPnDDLgP0++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/MOSip_Prefix-eqcdyjxqimbcycaqiylcfvzqssbp/MOSip_Prefix.pch -c /Users/antonello/Documents/MoSip/MOSipTest.m -o /Users/antonello/Documents/MoSip/build/MOSip.build/Debug/MoSip.build/Objects-normal/i386/MOSipTest.o0#
+lSLF07#2@52"Compile /Users/antonello/Documents/MoSip/MOSipTest.m299501524#299501525#0(153"/Users/antonello/Documents/MoSip/MOSipTest.m: In function 'main':/Users/antonello/Documents/MoSip/MOSipTest.m:225: warning: unused variable 'sipParser'1(22@27"Unused variable 'sipParser'299501525#66#87#0(6@44"/Users/antonello/Documents/MoSip/MOSipTest.m299418399#225#0#225#0#19"unused variable '*'0(0#0#44"/Users/antonello/Documents/MoSip/MOSipTest.m4300885448#1346"    cd /Users/antonello/Documents/MoSip    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.5.sdk -mfix-and-continue -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/antonello/Documents/MoSip/build/MOSip.build/Debug/MoSip.build/MoSip-generated-files.hmap -I/Users/antonello/Documents/MoSip/build/MOSip.build/Debug/MoSip.build/MoSip-own-target-headers.hmap -I/Users/antonello/Documents/MoSip/build/MOSip.build/Debug/MoSip.build/MoSip-all-target-headers.hmap -iquote /Users/antonello/Documents/MoSip/build/MOSip.build/Debug/MoSip.build/MoSip-project-headers.hmap -F/Users/antonello/Documents/MoSip/build/Debug -I/Users/antonello/Documents/MoSip/build/Debug/include -I/Users/antonello/Documents/MoSip/build/MOSip.build/Debug/MoSip.build/DerivedSources/i386 -I/Users/antonello/Documents/MoSip/build/MOSip.build/Debug/MoSip.build/DerivedSources -include /var/folders/Fm/FmNVbg+dGfSWyPnDDLgP0++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/MOSip_Prefix-eqcdyjxqimbcycaqiylcfvzqssbp/MOSip_Prefix.pch -c /Users/antonello/Documents/MoSip/MOSipTest.m -o /Users/antonello/Documents/MoSip/build/MOSip.build/Debug/MoSip.build/Objects-normal/i386/MOSipTest.o0#
 
 CCompileC build/MOSip.build/Debug/MoSip.build/Objects-normal/i386/MOSipTest.o /Users/marcopk/Desktop/ObjC-XCode/workspace/MOSip/MOSipTest.m normal i386 objective-c com.apple.compilers.gcc.4_2
 s299319277.584607
@@ -1022,8 +1024,8 @@ xcom.apple.compilers.gcc.4_2
 lSLF07#2@69"Compile /Users/marcopk/Desktop/ObjC-XCode/workspace/MoSip/MOSipTest.m299336544#299336545#0(0"0(0#0#61"/Users/marcopk/Desktop/ObjC-XCode/workspace/MoSip/MOSipTest.m4300885448#1533"    cd /Users/marcopk/Desktop/ObjC-XCode/workspace/MoSip    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.5.sdk -mfix-and-continue -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/marcopk/Desktop/ObjC-XCode/workspace/MoSip/build/MOSip.build/Debug/MoSip.build/MoSip-generated-files.hmap -I/Users/marcopk/Desktop/ObjC-XCode/workspace/MoSip/build/MOSip.build/Debug/MoSip.build/MoSip-own-target-headers.hmap -I/Users/marcopk/Desktop/ObjC-XCode/workspace/MoSip/build/MOSip.build/Debug/MoSip.build/MoSip-all-target-headers.hmap -iquote /Users/marcopk/Desktop/ObjC-XCode/workspace/MoSip/build/MOSip.build/Debug/MoSip.build/MoSip-project-headers.hmap -F/Users/marcopk/Desktop/ObjC-XCode/workspace/MoSip/build/Debug -I/Users/marcopk/Desktop/ObjC-XCode/workspace/MoSip/build/Debug/include -I/Users/marcopk/Desktop/ObjC-XCode/workspace/MoSip/build/MOSip.build/Debug/MoSip.build/DerivedSources/i386 -I/Users/marcopk/Desktop/ObjC-XCode/workspace/MoSip/build/MOSip.build/Debug/MoSip.build/DerivedSources -include /var/folders/SJ/SJ3zCXhHEgi78A2clxxvmk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/MOSip_Prefix-fihwfwzblnlcfiepwefkpufcnoos/MOSip_Prefix.pch -c /Users/marcopk/Desktop/ObjC-XCode/workspace/MoSip/MOSipTest.m -o /Users/marcopk/Desktop/ObjC-XCode/workspace/MoSip/build/MOSip.build/Debug/MoSip.build/Objects-normal/i386/MOSipTest.o0#
 
 CCompileC build/MOSip.build/Debug/MoSip.build/Objects-normal/i386/Message.o /Users/antonello/Documents/MoSip/Message.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s299418403.569654
-e299418403.882848
+s299501589.423661
+e299501590.126199
 r1
 xCompileC
 xbuild/MOSip.build/Debug/MoSip.build/Objects-normal/i386/Message.o
@@ -1032,7 +1034,11 @@ xnormal
 xi386
 xobjective-c
 xcom.apple.compilers.gcc.4_2
-lSLF07#2@50"Compile /Users/antonello/Documents/MoSip/Message.m299418403#299418403#0(0"0(0#0#42"/Users/antonello/Documents/MoSip/Message.m4300885448#1342"    cd /Users/antonello/Documents/MoSip    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.5.sdk -mfix-and-continue -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/antonello/Documents/MoSip/build/MOSip.build/Debug/MoSip.build/MoSip-generated-files.hmap -I/Users/antonello/Documents/MoSip/build/MOSip.build/Debug/MoSip.build/MoSip-own-target-headers.hmap -I/Users/antonello/Documents/MoSip/build/MOSip.build/Debug/MoSip.build/MoSip-all-target-headers.hmap -iquote /Users/antonello/Documents/MoSip/build/MOSip.build/Debug/MoSip.build/MoSip-project-headers.hmap -F/Users/antonello/Documents/MoSip/build/Debug -I/Users/antonello/Documents/MoSip/build/Debug/include -I/Users/antonello/Documents/MoSip/build/MOSip.build/Debug/MoSip.build/DerivedSources/i386 -I/Users/antonello/Documents/MoSip/build/MOSip.build/Debug/MoSip.build/DerivedSources -include /var/folders/Fm/FmNVbg+dGfSWyPnDDLgP0++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/MOSip_Prefix-eqcdyjxqimbcycaqiylcfvzqssbp/MOSip_Prefix.pch -c /Users/antonello/Documents/MoSip/Message.m -o /Users/antonello/Documents/MoSip/build/MOSip.build/Debug/MoSip.build/Objects-normal/i386/Message.o0#
+o/Users/antonello/Documents/MoSip/Message.m: In function '-[Message initWithStringMessage:]':
+o/Users/antonello/Documents/MoSip/Message.m:27: warning: control reaches end of non-void function
+o/Users/antonello/Documents/MoSip/Message.m: In function '-[Message initWithMessage:]':
+o/Users/antonello/Documents/MoSip/Message.m:34: warning: control reaches end of non-void function
+lSLF07#2@50"Compile /Users/antonello/Documents/MoSip/Message.m299501589#299501590#0(374"/Users/antonello/Documents/MoSip/Message.m: In function '-[Message initWithStringMessage:]':/Users/antonello/Documents/MoSip/Message.m:27: warning: control reaches end of non-void function/Users/antonello/Documents/MoSip/Message.m: In function '-[Message initWithMessage:]':/Users/antonello/Documents/MoSip/Message.m:34: warning: control reaches end of non-void function2(22@40"Control reaches end of non-void function299501590#93#97#0(6@42"/Users/antonello/Documents/MoSip/Message.m299501589#27#0#27#0#40"control reaches end of non-void function0(22@40"Control reaches end of non-void function299501590#277#97#0(6@42"/Users/antonello/Documents/MoSip/Message.m299501589#34#0#34#0#40"control reaches end of non-void function0(0#0#42"/Users/antonello/Documents/MoSip/Message.m4300885448#1342"    cd /Users/antonello/Documents/MoSip    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.5.sdk -mfix-and-continue -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/antonello/Documents/MoSip/build/MOSip.build/Debug/MoSip.build/MoSip-generated-files.hmap -I/Users/antonello/Documents/MoSip/build/MOSip.build/Debug/MoSip.build/MoSip-own-target-headers.hmap -I/Users/antonello/Documents/MoSip/build/MOSip.build/Debug/MoSip.build/MoSip-all-target-headers.hmap -iquote /Users/antonello/Documents/MoSip/build/MOSip.build/Debug/MoSip.build/MoSip-project-headers.hmap -F/Users/antonello/Documents/MoSip/build/Debug -I/Users/antonello/Documents/MoSip/build/Debug/include -I/Users/antonello/Documents/MoSip/build/MOSip.build/Debug/MoSip.build/DerivedSources/i386 -I/Users/antonello/Documents/MoSip/build/MOSip.build/Debug/MoSip.build/DerivedSources -include /var/folders/Fm/FmNVbg+dGfSWyPnDDLgP0++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/MOSip_Prefix-eqcdyjxqimbcycaqiylcfvzqssbp/MOSip_Prefix.pch -c /Users/antonello/Documents/MoSip/Message.m -o /Users/antonello/Documents/MoSip/build/MOSip.build/Debug/MoSip.build/Objects-normal/i386/Message.o0#
 
 CCompileC build/MOSip.build/Debug/MoSip.build/Objects-normal/i386/Message.o /Users/marcopk/Desktop/ObjC-XCode/workspace/MOSip/Message.m normal i386 objective-c com.apple.compilers.gcc.4_2
 s299319278.273329
@@ -1100,8 +1106,8 @@ xcom.apple.compilers.gcc.4_2
 lSLF07#2@73"Compile /Users/marcopk/Desktop/ObjC-XCode/workspace/MoSip/MutableString.m299320195#299320195#0(0"0(0#0#65"/Users/marcopk/Desktop/ObjC-XCode/workspace/MoSip/MutableString.m4300885448#1541"    cd /Users/marcopk/Desktop/ObjC-XCode/workspace/MoSip    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.5.sdk -mfix-and-continue -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/marcopk/Desktop/ObjC-XCode/workspace/MoSip/build/MOSip.build/Debug/MoSip.build/MoSip-generated-files.hmap -I/Users/marcopk/Desktop/ObjC-XCode/workspace/MoSip/build/MOSip.build/Debug/MoSip.build/MoSip-own-target-headers.hmap -I/Users/marcopk/Desktop/ObjC-XCode/workspace/MoSip/build/MOSip.build/Debug/MoSip.build/MoSip-all-target-headers.hmap -iquote /Users/marcopk/Desktop/ObjC-XCode/workspace/MoSip/build/MOSip.build/Debug/MoSip.build/MoSip-project-headers.hmap -F/Users/marcopk/Desktop/ObjC-XCode/workspace/MoSip/build/Debug -I/Users/marcopk/Desktop/ObjC-XCode/workspace/MoSip/build/Debug/include -I/Users/marcopk/Desktop/ObjC-XCode/workspace/MoSip/build/MOSip.build/Debug/MoSip.build/DerivedSources/i386 -I/Users/marcopk/Desktop/ObjC-XCode/workspace/MoSip/build/MOSip.build/Debug/MoSip.build/DerivedSources -include /var/folders/SJ/SJ3zCXhHEgi78A2clxxvmk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/MOSip_Prefix-fihwfwzblnlcfiepwefkpufcnoos/MOSip_Prefix.pch -c /Users/marcopk/Desktop/ObjC-XCode/workspace/MoSip/MutableString.m -o /Users/marcopk/Desktop/ObjC-XCode/workspace/MoSip/build/MOSip.build/Debug/MoSip.build/Objects-normal/i386/MutableString.o0#
 
 CCompileC build/MOSip.build/Debug/MoSip.build/Objects-normal/i386/NameAddress.o /Users/antonello/Documents/MoSip/NameAddress.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s299418404.047634
-e299418404.386371
+s299501525.476200
+e299501525.849285
 r1
 xCompileC
 xbuild/MOSip.build/Debug/MoSip.build/Objects-normal/i386/NameAddress.o
@@ -1110,7 +1116,7 @@ xnormal
 xi386
 xobjective-c
 xcom.apple.compilers.gcc.4_2
-lSLF07#2@54"Compile /Users/antonello/Documents/MoSip/NameAddress.m299418404#299418404#0(0"0(0#0#46"/Users/antonello/Documents/MoSip/NameAddress.m4300885448#1350"    cd /Users/antonello/Documents/MoSip    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.5.sdk -mfix-and-continue -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/antonello/Documents/MoSip/build/MOSip.build/Debug/MoSip.build/MoSip-generated-files.hmap -I/Users/antonello/Documents/MoSip/build/MOSip.build/Debug/MoSip.build/MoSip-own-target-headers.hmap -I/Users/antonello/Documents/MoSip/build/MOSip.build/Debug/MoSip.build/MoSip-all-target-headers.hmap -iquote /Users/antonello/Documents/MoSip/build/MOSip.build/Debug/MoSip.build/MoSip-project-headers.hmap -F/Users/antonello/Documents/MoSip/build/Debug -I/Users/antonello/Documents/MoSip/build/Debug/include -I/Users/antonello/Documents/MoSip/build/MOSip.build/Debug/MoSip.build/DerivedSources/i386 -I/Users/antonello/Documents/MoSip/build/MOSip.build/Debug/MoSip.build/DerivedSources -include /var/folders/Fm/FmNVbg+dGfSWyPnDDLgP0++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/MOSip_Prefix-eqcdyjxqimbcycaqiylcfvzqssbp/MOSip_Prefix.pch -c /Users/antonello/Documents/MoSip/NameAddress.m -o /Users/antonello/Documents/MoSip/build/MOSip.build/Debug/MoSip.build/Objects-normal/i386/NameAddress.o0#
+lSLF07#2@54"Compile /Users/antonello/Documents/MoSip/NameAddress.m299501525#299501525#0(0"0(0#0#46"/Users/antonello/Documents/MoSip/NameAddress.m4300885448#1350"    cd /Users/antonello/Documents/MoSip    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.5.sdk -mfix-and-continue -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/antonello/Documents/MoSip/build/MOSip.build/Debug/MoSip.build/MoSip-generated-files.hmap -I/Users/antonello/Documents/MoSip/build/MOSip.build/Debug/MoSip.build/MoSip-own-target-headers.hmap -I/Users/antonello/Documents/MoSip/build/MOSip.build/Debug/MoSip.build/MoSip-all-target-headers.hmap -iquote /Users/antonello/Documents/MoSip/build/MOSip.build/Debug/MoSip.build/MoSip-project-headers.hmap -F/Users/antonello/Documents/MoSip/build/Debug -I/Users/antonello/Documents/MoSip/build/Debug/include -I/Users/antonello/Documents/MoSip/build/MOSip.build/Debug/MoSip.build/DerivedSources/i386 -I/Users/antonello/Documents/MoSip/build/MOSip.build/Debug/MoSip.build/DerivedSources -include /var/folders/Fm/FmNVbg+dGfSWyPnDDLgP0++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/MOSip_Prefix-eqcdyjxqimbcycaqiylcfvzqssbp/MOSip_Prefix.pch -c /Users/antonello/Documents/MoSip/NameAddress.m -o /Users/antonello/Documents/MoSip/build/MOSip.build/Debug/MoSip.build/Objects-normal/i386/NameAddress.o0#
 
 CCompileC build/MOSip.build/Debug/MoSip.build/Objects-normal/i386/NameAddress.o /Users/marcopk/Desktop/ObjC-XCode/workspace/MOSip/NameAddress.m normal i386 objective-c com.apple.compilers.gcc.4_2
 s299319278.793141
@@ -1139,8 +1145,8 @@ xcom.apple.compilers.gcc.4_2
 lSLF07#2@71"Compile /Users/marcopk/Desktop/ObjC-XCode/workspace/MoSip/NameAddress.m299320196#299320196#0(0"0(0#0#63"/Users/marcopk/Desktop/ObjC-XCode/workspace/MoSip/NameAddress.m4300885448#1537"    cd /Users/marcopk/Desktop/ObjC-XCode/workspace/MoSip    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.5.sdk -mfix-and-continue -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/marcopk/Desktop/ObjC-XCode/workspace/MoSip/build/MOSip.build/Debug/MoSip.build/MoSip-generated-files.hmap -I/Users/marcopk/Desktop/ObjC-XCode/workspace/MoSip/build/MOSip.build/Debug/MoSip.build/MoSip-own-target-headers.hmap -I/Users/marcopk/Desktop/ObjC-XCode/workspace/MoSip/build/MOSip.build/Debug/MoSip.build/MoSip-all-target-headers.hmap -iquote /Users/marcopk/Desktop/ObjC-XCode/workspace/MoSip/build/MOSip.build/Debug/MoSip.build/MoSip-project-headers.hmap -F/Users/marcopk/Desktop/ObjC-XCode/workspace/MoSip/build/Debug -I/Users/marcopk/Desktop/ObjC-XCode/workspace/MoSip/build/Debug/include -I/Users/marcopk/Desktop/ObjC-XCode/workspace/MoSip/build/MOSip.build/Debug/MoSip.build/DerivedSources/i386 -I/Users/marcopk/Desktop/ObjC-XCode/workspace/MoSip/build/MOSip.build/Debug/MoSip.build/DerivedSources -include /var/folders/SJ/SJ3zCXhHEgi78A2clxxvmk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/MOSip_Prefix-fihwfwzblnlcfiepwefkpufcnoos/MOSip_Prefix.pch -c /Users/marcopk/Desktop/ObjC-XCode/workspace/MoSip/NameAddress.m -o /Users/marcopk/Desktop/ObjC-XCode/workspace/MoSip/build/MOSip.build/Debug/MoSip.build/Objects-normal/i386/NameAddress.o0#
 
 CCompileC build/MOSip.build/Debug/MoSip.build/Objects-normal/i386/Parser.o /Users/antonello/Documents/MoSip/Parser.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s299418403.230412
-e299418403.679269
+s299497182.877773
+e299497183.470604
 r1
 xCompileC
 xbuild/MOSip.build/Debug/MoSip.build/Objects-normal/i386/Parser.o
@@ -1149,7 +1155,7 @@ xnormal
 xi386
 xobjective-c
 xcom.apple.compilers.gcc.4_2
-lSLF07#2@49"Compile /Users/antonello/Documents/MoSip/Parser.m299418403#299418403#0(0"0(0#0#41"/Users/antonello/Documents/MoSip/Parser.m4300885448#1340"    cd /Users/antonello/Documents/MoSip    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.5.sdk -mfix-and-continue -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/antonello/Documents/MoSip/build/MOSip.build/Debug/MoSip.build/MoSip-generated-files.hmap -I/Users/antonello/Documents/MoSip/build/MOSip.build/Debug/MoSip.build/MoSip-own-target-headers.hmap -I/Users/antonello/Documents/MoSip/build/MOSip.build/Debug/MoSip.build/MoSip-all-target-headers.hmap -iquote /Users/antonello/Documents/MoSip/build/MOSip.build/Debug/MoSip.build/MoSip-project-headers.hmap -F/Users/antonello/Documents/MoSip/build/Debug -I/Users/antonello/Documents/MoSip/build/Debug/include -I/Users/antonello/Documents/MoSip/build/MOSip.build/Debug/MoSip.build/DerivedSources/i386 -I/Users/antonello/Documents/MoSip/build/MOSip.build/Debug/MoSip.build/DerivedSources -include /var/folders/Fm/FmNVbg+dGfSWyPnDDLgP0++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/MOSip_Prefix-eqcdyjxqimbcycaqiylcfvzqssbp/MOSip_Prefix.pch -c /Users/antonello/Documents/MoSip/Parser.m -o /Users/antonello/Documents/MoSip/build/MOSip.build/Debug/MoSip.build/Objects-normal/i386/Parser.o0#
+lSLF07#2@49"Compile /Users/antonello/Documents/MoSip/Parser.m299497182#299497183#0(0"0(0#0#41"/Users/antonello/Documents/MoSip/Parser.m4300885448#1340"    cd /Users/antonello/Documents/MoSip    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.5.sdk -mfix-and-continue -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/antonello/Documents/MoSip/build/MOSip.build/Debug/MoSip.build/MoSip-generated-files.hmap -I/Users/antonello/Documents/MoSip/build/MOSip.build/Debug/MoSip.build/MoSip-own-target-headers.hmap -I/Users/antonello/Documents/MoSip/build/MOSip.build/Debug/MoSip.build/MoSip-all-target-headers.hmap -iquote /Users/antonello/Documents/MoSip/build/MOSip.build/Debug/MoSip.build/MoSip-project-headers.hmap -F/Users/antonello/Documents/MoSip/build/Debug -I/Users/antonello/Documents/MoSip/build/Debug/include -I/Users/antonello/Documents/MoSip/build/MOSip.build/Debug/MoSip.build/DerivedSources/i386 -I/Users/antonello/Documents/MoSip/build/MOSip.build/Debug/MoSip.build/DerivedSources -include /var/folders/Fm/FmNVbg+dGfSWyPnDDLgP0++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/MOSip_Prefix-eqcdyjxqimbcycaqiylcfvzqssbp/MOSip_Prefix.pch -c /Users/antonello/Documents/MoSip/Parser.m -o /Users/antonello/Documents/MoSip/build/MOSip.build/Debug/MoSip.build/Objects-normal/i386/Parser.o0#
 
 CCompileC build/MOSip.build/Debug/MoSip.build/Objects-normal/i386/Parser.o /Users/marcopk/Desktop/ObjC-XCode/workspace/MOSip/Parser.m normal i386 objective-c com.apple.compilers.gcc.4_2
 s299319278.005113
@@ -1217,8 +1223,8 @@ xcom.apple.compilers.gcc.4_2
 lSLF07#2@71"Compile /Users/marcopk/Desktop/ObjC-XCode/workspace/MoSip/RequestLine.m299320196#299320196#0(0"0(0#0#63"/Users/marcopk/Desktop/ObjC-XCode/workspace/MoSip/RequestLine.m4300885448#1537"    cd /Users/marcopk/Desktop/ObjC-XCode/workspace/MoSip    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.5.sdk -mfix-and-continue -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/marcopk/Desktop/ObjC-XCode/workspace/MoSip/build/MOSip.build/Debug/MoSip.build/MoSip-generated-files.hmap -I/Users/marcopk/Desktop/ObjC-XCode/workspace/MoSip/build/MOSip.build/Debug/MoSip.build/MoSip-own-target-headers.hmap -I/Users/marcopk/Desktop/ObjC-XCode/workspace/MoSip/build/MOSip.build/Debug/MoSip.build/MoSip-all-target-headers.hmap -iquote /Users/marcopk/Desktop/ObjC-XCode/workspace/MoSip/build/MOSip.build/Debug/MoSip.build/MoSip-project-headers.hmap -F/Users/marcopk/Desktop/ObjC-XCode/workspace/MoSip/build/Debug -I/Users/marcopk/Desktop/ObjC-XCode/workspace/MoSip/build/Debug/include -I/Users/marcopk/Desktop/ObjC-XCode/workspace/MoSip/build/MOSip.build/Debug/MoSip.build/DerivedSources/i386 -I/Users/marcopk/Desktop/ObjC-XCode/workspace/MoSip/build/MOSip.build/Debug/MoSip.build/DerivedSources -include /var/folders/SJ/SJ3zCXhHEgi78A2clxxvmk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/MOSip_Prefix-fihwfwzblnlcfiepwefkpufcnoos/MOSip_Prefix.pch -c /Users/marcopk/Desktop/ObjC-XCode/workspace/MoSip/RequestLine.m -o /Users/marcopk/Desktop/ObjC-XCode/workspace/MoSip/build/MOSip.build/Debug/MoSip.build/Objects-normal/i386/RequestLine.o0#
 
 CCompileC build/MOSip.build/Debug/MoSip.build/Objects-normal/i386/SIPDelimiter.o /Users/antonello/Documents/MoSip/SIPDelimiter.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s299418405.398495
-e299418405.728131
+s299497183.450834
+e299497183.753666
 r1
 xCompileC
 xbuild/MOSip.build/Debug/MoSip.build/Objects-normal/i386/SIPDelimiter.o
@@ -1227,7 +1233,7 @@ xnormal
 xi386
 xobjective-c
 xcom.apple.compilers.gcc.4_2
-lSLF07#2@55"Compile /Users/antonello/Documents/MoSip/SIPDelimiter.m299418405#299418405#0(0"0(0#0#47"/Users/antonello/Documents/MoSip/SIPDelimiter.m4300885448#1352"    cd /Users/antonello/Documents/MoSip    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.5.sdk -mfix-and-continue -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/antonello/Documents/MoSip/build/MOSip.build/Debug/MoSip.build/MoSip-generated-files.hmap -I/Users/antonello/Documents/MoSip/build/MOSip.build/Debug/MoSip.build/MoSip-own-target-headers.hmap -I/Users/antonello/Documents/MoSip/build/MOSip.build/Debug/MoSip.build/MoSip-all-target-headers.hmap -iquote /Users/antonello/Documents/MoSip/build/MOSip.build/Debug/MoSip.build/MoSip-project-headers.hmap -F/Users/antonello/Documents/MoSip/build/Debug -I/Users/antonello/Documents/MoSip/build/Debug/include -I/Users/antonello/Documents/MoSip/build/MOSip.build/Debug/MoSip.build/DerivedSources/i386 -I/Users/antonello/Documents/MoSip/build/MOSip.build/Debug/MoSip.build/DerivedSources -include /var/folders/Fm/FmNVbg+dGfSWyPnDDLgP0++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/MOSip_Prefix-eqcdyjxqimbcycaqiylcfvzqssbp/MOSip_Prefix.pch -c /Users/antonello/Documents/MoSip/SIPDelimiter.m -o /Users/antonello/Documents/MoSip/build/MOSip.build/Debug/MoSip.build/Objects-normal/i386/SIPDelimiter.o0#
+lSLF07#2@55"Compile /Users/antonello/Documents/MoSip/SIPDelimiter.m299497183#299497183#0(0"0(0#0#47"/Users/antonello/Documents/MoSip/SIPDelimiter.m4300885448#1352"    cd /Users/antonello/Documents/MoSip    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.5.sdk -mfix-and-continue -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/antonello/Documents/MoSip/build/MOSip.build/Debug/MoSip.build/MoSip-generated-files.hmap -I/Users/antonello/Documents/MoSip/build/MOSip.build/Debug/MoSip.build/MoSip-own-target-headers.hmap -I/Users/antonello/Documents/MoSip/build/MOSip.build/Debug/MoSip.build/MoSip-all-target-headers.hmap -iquote /Users/antonello/Documents/MoSip/build/MOSip.build/Debug/MoSip.build/MoSip-project-headers.hmap -F/Users/antonello/Documents/MoSip/build/Debug -I/Users/antonello/Documents/MoSip/build/Debug/include -I/Users/antonello/Documents/MoSip/build/MOSip.build/Debug/MoSip.build/DerivedSources/i386 -I/Users/antonello/Documents/MoSip/build/MOSip.build/Debug/MoSip.build/DerivedSources -include /var/folders/Fm/FmNVbg+dGfSWyPnDDLgP0++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/MOSip_Prefix-eqcdyjxqimbcycaqiylcfvzqssbp/MOSip_Prefix.pch -c /Users/antonello/Documents/MoSip/SIPDelimiter.m -o /Users/antonello/Documents/MoSip/build/MOSip.build/Debug/MoSip.build/Objects-normal/i386/SIPDelimiter.o0#
 
 CCompileC build/MOSip.build/Debug/MoSip.build/Objects-normal/i386/SIPDelimiter.o /Users/marcopk/Desktop/ObjC-XCode/workspace/MOSip/SIPDelimiter.m normal i386 objective-c com.apple.compilers.gcc.4_2
 s299319280.143984
@@ -1295,8 +1301,8 @@ xcom.apple.compilers.gcc.4_2
 lSLF07#2@72"Compile /Users/marcopk/Desktop/ObjC-XCode/workspace/MoSip/SipKeedAlive.m299320197#299320197#0(0"0(0#0#64"/Users/marcopk/Desktop/ObjC-XCode/workspace/MoSip/SipKeedAlive.m4300885448#1539"    cd /Users/marcopk/Desktop/ObjC-XCode/workspace/MoSip    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.5.sdk -mfix-and-continue -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/marcopk/Desktop/ObjC-XCode/workspace/MoSip/build/MOSip.build/Debug/MoSip.build/MoSip-generated-files.hmap -I/Users/marcopk/Desktop/ObjC-XCode/workspace/MoSip/build/MOSip.build/Debug/MoSip.build/MoSip-own-target-headers.hmap -I/Users/marcopk/Desktop/ObjC-XCode/workspace/MoSip/build/MOSip.build/Debug/MoSip.build/MoSip-all-target-headers.hmap -iquote /Users/marcopk/Desktop/ObjC-XCode/workspace/MoSip/build/MOSip.build/Debug/MoSip.build/MoSip-project-headers.hmap -F/Users/marcopk/Desktop/ObjC-XCode/workspace/MoSip/build/Debug -I/Users/marcopk/Desktop/ObjC-XCode/workspace/MoSip/build/Debug/include -I/Users/marcopk/Desktop/ObjC-XCode/workspace/MoSip/build/MOSip.build/Debug/MoSip.build/DerivedSources/i386 -I/Users/marcopk/Desktop/ObjC-XCode/workspace/MoSip/build/MOSip.build/Debug/MoSip.build/DerivedSources -include /var/folders/SJ/SJ3zCXhHEgi78A2clxxvmk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/MOSip_Prefix-fihwfwzblnlcfiepwefkpufcnoos/MOSip_Prefix.pch -c /Users/marcopk/Desktop/ObjC-XCode/workspace/MoSip/SipKeedAlive.m -o /Users/marcopk/Desktop/ObjC-XCode/workspace/MoSip/build/MOSip.build/Debug/MoSip.build/Objects-normal/i386/SipKeedAlive.o0#
 
 CCompileC build/MOSip.build/Debug/MoSip.build/Objects-normal/i386/SipParser.o /Users/antonello/Documents/MoSip/SipParser.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s299418404.614885
-e299418405.040153
+s299501525.517070
+e299501525.952059
 r1
 xCompileC
 xbuild/MOSip.build/Debug/MoSip.build/Objects-normal/i386/SipParser.o
@@ -1305,7 +1311,7 @@ xnormal
 xi386
 xobjective-c
 xcom.apple.compilers.gcc.4_2
-lSLF07#2@52"Compile /Users/antonello/Documents/MoSip/SipParser.m299418404#299418405#0(0"0(0#0#44"/Users/antonello/Documents/MoSip/SipParser.m4300885448#1346"    cd /Users/antonello/Documents/MoSip    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.5.sdk -mfix-and-continue -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/antonello/Documents/MoSip/build/MOSip.build/Debug/MoSip.build/MoSip-generated-files.hmap -I/Users/antonello/Documents/MoSip/build/MOSip.build/Debug/MoSip.build/MoSip-own-target-headers.hmap -I/Users/antonello/Documents/MoSip/build/MOSip.build/Debug/MoSip.build/MoSip-all-target-headers.hmap -iquote /Users/antonello/Documents/MoSip/build/MOSip.build/Debug/MoSip.build/MoSip-project-headers.hmap -F/Users/antonello/Documents/MoSip/build/Debug -I/Users/antonello/Documents/MoSip/build/Debug/include -I/Users/antonello/Documents/MoSip/build/MOSip.build/Debug/MoSip.build/DerivedSources/i386 -I/Users/antonello/Documents/MoSip/build/MOSip.build/Debug/MoSip.build/DerivedSources -include /var/folders/Fm/FmNVbg+dGfSWyPnDDLgP0++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/MOSip_Prefix-eqcdyjxqimbcycaqiylcfvzqssbp/MOSip_Prefix.pch -c /Users/antonello/Documents/MoSip/SipParser.m -o /Users/antonello/Documents/MoSip/build/MOSip.build/Debug/MoSip.build/Objects-normal/i386/SipParser.o0#
+lSLF07#2@52"Compile /Users/antonello/Documents/MoSip/SipParser.m299501525#299501525#0(0"0(0#0#44"/Users/antonello/Documents/MoSip/SipParser.m4300885448#1346"    cd /Users/antonello/Documents/MoSip    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.5.sdk -mfix-and-continue -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/antonello/Documents/MoSip/build/MOSip.build/Debug/MoSip.build/MoSip-generated-files.hmap -I/Users/antonello/Documents/MoSip/build/MOSip.build/Debug/MoSip.build/MoSip-own-target-headers.hmap -I/Users/antonello/Documents/MoSip/build/MOSip.build/Debug/MoSip.build/MoSip-all-target-headers.hmap -iquote /Users/antonello/Documents/MoSip/build/MOSip.build/Debug/MoSip.build/MoSip-project-headers.hmap -F/Users/antonello/Documents/MoSip/build/Debug -I/Users/antonello/Documents/MoSip/build/Debug/include -I/Users/antonello/Documents/MoSip/build/MOSip.build/Debug/MoSip.build/DerivedSources/i386 -I/Users/antonello/Documents/MoSip/build/MOSip.build/Debug/MoSip.build/DerivedSources -include /var/folders/Fm/FmNVbg+dGfSWyPnDDLgP0++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/MOSip_Prefix-eqcdyjxqimbcycaqiylcfvzqssbp/MOSip_Prefix.pch -c /Users/antonello/Documents/MoSip/SipParser.m -o /Users/antonello/Documents/MoSip/build/MOSip.build/Debug/MoSip.build/Objects-normal/i386/SipParser.o0#
 
 CCompileC build/MOSip.build/Debug/MoSip.build/Objects-normal/i386/SipParser.o /Users/marcopk/Desktop/ObjC-XCode/workspace/MOSip/SipParser.m normal i386 objective-c com.apple.compilers.gcc.4_2
 s299319279.415293
@@ -1541,14 +1547,14 @@ xcom.apple.compilers.gcc.4_2
 lSLF07#2@70"Compile /Users/marcopk/Desktop/ObjC-XCode/workspace/MoSip/StatusLine.m299320196#299320196#0(0"0(0#0#62"/Users/marcopk/Desktop/ObjC-XCode/workspace/MoSip/StatusLine.m4300885448#1535"    cd /Users/marcopk/Desktop/ObjC-XCode/workspace/MoSip    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.5.sdk -mfix-and-continue -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/marcopk/Desktop/ObjC-XCode/workspace/MoSip/build/MOSip.build/Debug/MoSip.build/MoSip-generated-files.hmap -I/Users/marcopk/Desktop/ObjC-XCode/workspace/MoSip/build/MOSip.build/Debug/MoSip.build/MoSip-own-target-headers.hmap -I/Users/marcopk/Desktop/ObjC-XCode/workspace/MoSip/build/MOSip.build/Debug/MoSip.build/MoSip-all-target-headers.hmap -iquote /Users/marcopk/Desktop/ObjC-XCode/workspace/MoSip/build/MOSip.build/Debug/MoSip.build/MoSip-project-headers.hmap -F/Users/marcopk/Desktop/ObjC-XCode/workspace/MoSip/build/Debug -I/Users/marcopk/Desktop/ObjC-XCode/workspace/MoSip/build/Debug/include -I/Users/marcopk/Desktop/ObjC-XCode/workspace/MoSip/build/MOSip.build/Debug/MoSip.build/DerivedSources/i386 -I/Users/marcopk/Desktop/ObjC-XCode/workspace/MoSip/build/MOSip.build/Debug/MoSip.build/DerivedSources -include /var/folders/SJ/SJ3zCXhHEgi78A2clxxvmk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/MOSip_Prefix-fihwfwzblnlcfiepwefkpufcnoos/MOSip_Prefix.pch -c /Users/marcopk/Desktop/ObjC-XCode/workspace/MoSip/StatusLine.m -o /Users/marcopk/Desktop/ObjC-XCode/workspace/MoSip/build/MOSip.build/Debug/MoSip.build/Objects-normal/i386/StatusLine.o0#
 
 CLd /Users/antonello/Documents/MoSip/build/Debug/MoSip normal i386
-s299418405.728223
-e299418406.656490
+s299501590.126280
+e299501590.155443
 r1
 xLd
 x/Users/antonello/Documents/MoSip/build/Debug/MoSip
 xnormal
 xi386
-lSLF07#2@55"Link /Users/antonello/Documents/MoSip/build/Debug/MoSip299418405#299418406#0(0"0(0#0#0"4300885448#478"    cd /Users/antonello/Documents/MoSip    setenv MACOSX_DEPLOYMENT_TARGET 10.5    /Developer/usr/bin/gcc-4.2 -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -L/Users/antonello/Documents/MoSip/build/Debug -F/Users/antonello/Documents/MoSip/build/Debug -filelist /Users/antonello/Documents/MoSip/build/MOSip.build/Debug/MoSip.build/Objects-normal/i386/MoSip.LinkFileList -mmacosx-version-min=10.5 -framework Foundation -o /Users/antonello/Documents/MoSip/build/Debug/MoSip0#
+lSLF07#2@55"Link /Users/antonello/Documents/MoSip/build/Debug/MoSip299501590#299501590#0(0"0(0#0#0"4300885448#478"    cd /Users/antonello/Documents/MoSip    setenv MACOSX_DEPLOYMENT_TARGET 10.5    /Developer/usr/bin/gcc-4.2 -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -L/Users/antonello/Documents/MoSip/build/Debug -F/Users/antonello/Documents/MoSip/build/Debug -filelist /Users/antonello/Documents/MoSip/build/MOSip.build/Debug/MoSip.build/Objects-normal/i386/MoSip.LinkFileList -mmacosx-version-min=10.5 -framework Foundation -o /Users/antonello/Documents/MoSip/build/Debug/MoSip0#
 
 CLd /Users/marcopk/Desktop/ObjC-XCode/workspace/MOSip/build/Debug/MoSip normal i386
 s299319280.477752

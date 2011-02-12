@@ -68,16 +68,17 @@ Four important methods  are inherited from the base class providing the appropri
 
 {{{
 
-public void sendMessage(Address toAddress, Address fromAddress, String msg, String contentType)
+1) public void sendMessage(Address toAddress, Address fromAddress, String msg, String contentType)
 
-public void sendMessage(Address toAddress, Address toContactAddress, Address fromAddress, String msg, String contentType)
+2) public void sendMessage(Address toAddress, Address toContactAddress, Address fromAddress, String msg, String contentType)
 
-public void send(Address toAddress, BasicMessage message);
+3) public void send(Address toAddress, BasicMessage message);
 
-public void send(Address toAddress, Address toContactAddress, BasicMessage message)
+4) public void send(Address toAddress, Address toContactAddress, BasicMessage message)
 }}}
 
-The difference between these methods is first of all that the first two methods don't use our JSON based message approach but allows the developer to send a generic String whereas the others use our implementation of a base message as content. The other main difference among these functions is that two of them use "toContactAddress" in addition to "toAddress" parameter. Contact address represents the real destination address of the target node while the first one is keept only as reference. This is useful in different scenarios where a peer behind a NAT advertises as contact address a specific ip:port different form the private one where it can receive incoming messages without firewall or NAT issues.
+The difference between these methods is first of all that two of them (1,2) don't use our JSON based message approach but allows the developer to send a generic String to the destination whereas the others use our implementation of a base message as content. 
+Another main difference among these functions is that method 3 and 4 use "toContactAddress" in addition to "toAddress" parameter. Contact address represents the real destination address of the target node while the first one is keept only as reference. This is useful in different scenarios where a peer behind a NAT advertises as contact address a specific ip:port different form the private one where it can receive incoming messages without firewall or NAT issues.
 
 Message definition and management in sip2peer by default is done using JSON format ([http://www.json.org/ http://www.json.org/]) but the design is open to allows new format as for example XML for the communication. 
 

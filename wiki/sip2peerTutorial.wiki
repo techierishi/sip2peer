@@ -62,7 +62,7 @@ protected void onDeliveryMsgSuccess(String peerMsgSended, Address receiver,Strin
 }
 }}}
 
-These method are called when the node receive a message (String or JSON based) and when a message is correctly delivered or if there are some errors.  
+These methods are called when the node receive a message (String or JSON based) and when a message is correctly delivered or if there are some errors.  
 
 Four important methods  are inherited from the base class providing the appropriate functions to send a message to a destination node. These method are:
 

@@ -5,14 +5,37 @@ sip2peer is an open-source SIP-based middleware for the implementation of any di
 
 Main characteristics are:
 
-Multiplatform nature
-Simple communication API with notification system
-SIP-Based platform
-NAT traversal management
-Efficient, Scalable and Configurable structure
+ * Multiplatform nature
+ * Simple communication API with notification system
+ * SIP-Based platform
+ * NAT traversal management
+ * Efficient, Scalable and Configurable structure
 
 *Supported Platform*
 
 At this moment sip2peer is available for Java SE and Android platforms, but we are working on the iOS release.
 
-==Tutorial==
+==Java/Android Tutorial==
+
+This tutorial shows what are the main element of the library, how to create a simple peer that interacts with the others. We will analyze also the problem of NAT traversal and how to easily manage it with sip2peer.
+
+As mentioned before the Java and the Android implementation of the library are based on the java SIP stack called mjSIP [http://www.mjsip.org http://www.mjsip.org] that allows to manage the exchange of SIP messages or multimedia streams. 
+
+Creating our own peer class using sip2peer is extremely simple and it is only necessary to extend the Class called Peer. In our case we have:
+
+`
+@Override
+	protected void onDeliveryMsgFailure(String peerMsgSended, Address receiver,
+			String contentType) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	protected void onDeliveryMsgSuccess(String peerMsgSended, Address receiver,
+			String contentType) {
+		// TODO Auto-generated method stub
+		
+	}
+`
+   

@@ -68,16 +68,16 @@ Four important methods  are inherited from the base class providing the appropri
 
 {{{
 
-public sendMessage(Address toAddress, Address fromAddress, String msg, String contentType)
+public void sendMessage(Address toAddress, Address fromAddress, String msg, String contentType)
 
-public sendMessage(Address toAddress, Address toContactAddress, Address fromAddress, String msg, String contentType)
+public void sendMessage(Address toAddress, Address toContactAddress, Address fromAddress, String msg, String contentType)
 
 public void send(Address toAddress, BasicMessage message);
 
 public void send(Address toAddress, Address toContactAddress, BasicMessage message)
 }}}
 
-The difference between these two method is that the second one use toContactAddress parameter as real destination address and the first one is keept only as reference. This is useful in scenarios where a peer behind a NAT advertises as contact address a specific ip:port different form the original one and where it can receive incoming messages without firewall or NAT issues.
+The difference between these methods is first of all that the first two methods don't use our JSON based message approach but allows the developer to send a generic String whereas the second two method use our implementation of a base message as content to send. The other difference among these function is that two of them use toContactAddress in addition to the toAddress parameter. When there is the specification of a contact address it represent the real destination address of the target not and the first one is keept only as reference. This is useful in different scenarios where a peer behind a NAT advertises as contact address a specific ip:port different form the original one and where it can receive incoming messages without firewall or NAT issues.
 
 Message definition and management in sip2peer by default is done using JSON format ([http://www.json.org/ http://www.json.org/]) but the design it open to allows new format as for example XML. In this tutorial we are focused to use the JSON feature both for message definition and exchange. For this reason we will use the appropriate send methods and onReceiveJSONMsg function.
 

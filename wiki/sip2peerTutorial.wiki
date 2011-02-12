@@ -91,5 +91,5 @@ The base class used to define a message that could be easily transformed in a JS
  * String type
  * Payload payload
 
-Payload in another base class of the library that defines a data structure of  key/value for the message (implements an Hashtable). The class permits different approach to create a payload, through constructors and methods indeed and is also  possible to add and remove parameters from it. Detailed information are available 
+Payload in another base class of the library that defines a data structure of  key/value for the message (implements an Hashtable). The class permits different approach to create a payload, through constructors and methods indeed and is also  possible to add and remove parameters from it. Detailed information are available in the JAVA Doc of the project.
    

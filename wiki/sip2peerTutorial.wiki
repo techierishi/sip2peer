@@ -35,7 +35,7 @@ public SimplePeer(String pathConfig) {
 }
 }}}
 
-Extending Peer Class implies that SimplePeer class has to override to fundamental method used by the library to notifie the result of a delivery procedure for a specific message.  
+Extending Peer Class implies that SimplePeer class has to override to fundamental method used by the library to notifie the result of a delivery procedure for a specific message. Respectively these functions are called when there is an error in message's delivery and otherwise when the message is correctly sent to the target node.
 
 {{{
 @Override
@@ -48,4 +48,13 @@ protected void onDeliveryMsgSuccess(String peerMsgSended, Address receiver,Strin
               ...
 }
 }}}
+
+Two important methods inherited from the base class are the *send()* functions. They allows to send a message to a destination and the prototype are:
+
+{{{
+public void send(Address toAddress, BasicMessage message);
+
+public void send(Address toAddress, Address toContactAddress, BasicMessage message)
+}}}
+
    

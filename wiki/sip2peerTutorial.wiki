@@ -23,7 +23,9 @@ As mentioned before the Java and the Android implementation of the library are b
 
 Creating our own peer class using sip2peer is extremely simple and it is only necessary to extend the Class called Peer. In our case we have:
 
-{{{ public class SimplePeer extends Peer  }}}
+{{{ 
+public class SimplePeer extends Peer  
+}}}
 
 Class's constructor has to call the super method with  the path of peer configuration file (detailed information later in this tutorial) and the unique key of the peer in the network.
 

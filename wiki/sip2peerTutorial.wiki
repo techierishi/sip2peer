@@ -25,17 +25,13 @@ Creating our own peer class using sip2peer is extremely simple and it is only ne
 
 {{{
 @Override
-	protected void onDeliveryMsgFailure(String peerMsgSended, Address receiver,
-			String contentType) {
-		// TODO Auto-generated method stub
-		
-	}
+protected void onDeliveryMsgFailure(String peerMsgSended, Address receiver,String contentType) {
+		...
+}
 
-	@Override
-	protected void onDeliveryMsgSuccess(String peerMsgSended, Address receiver,
-			String contentType) {
-		// TODO Auto-generated method stub
-		
-	}
+@Override
+protected void onDeliveryMsgSuccess(String peerMsgSended, Address receiver,String contentType) {
+              ...
+}
 }}}
    

@@ -21,7 +21,7 @@ This tutorial shows what are the main element of the library, how to create a si
 
 As mentioned before the Java and the Android implementation of the library are based on the java SIP stack called mjSIP [http://www.mjsip.org http://www.mjsip.org] that allows to manage the exchange of SIP messages or multimedia streams. 
 
-Creating our own peer class using sip2peer is extremely simple and it is only necessary to extend the Class called Peer. In our case we have:
+Creating our own peer class using sip2peer is extremely simple and it is only necessary to extend the Class called *Peer*. In our case we have:
 
 {{{ 
 public class SimplePeer extends Peer  
@@ -35,7 +35,7 @@ public SimplePeer(String pathConfig) {
 }
 }}}
 
-Extending Peer Class the developer can to override different fundamental methods from the base class. The main important functions that should be override for the message exchange and for the communication are the following:
+Extending *Peer* Class the developer can to override different fundamental methods from the base class. The main important functions that should be override for the message exchange and for the communication are the following:
 
 {{{
 
@@ -62,13 +62,15 @@ protected void onDeliveryMsgSuccess(String peerMsgSended, Address receiver,Strin
 }
 }}}
 
-These method are called when the node receive a message (String or JSON based) or if a message delivery is correctly performed or if there are some errors.  
+These method are called when the node receive a message (String or JSON based) and when a message is correctly delivered or if there are some errors.  
 
-Three important methods inherited from the base class are the *send()* functions. They allows to send a message to a destination specified through an address:
+Four important methods  are inherited from the base class providing the appropriate functions to send a message to a destination node. These method are:
 
 {{{
 
+public sendMessage(Address toAddress, Address fromAddress, String msg, String contentType)
 
+public sendMessage(Address toAddress, Address toContactAddress, Address fromAddress, String msg, String contentType)
 
 public void send(Address toAddress, BasicMessage message);
 

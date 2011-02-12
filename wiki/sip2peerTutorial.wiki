@@ -57,5 +57,5 @@ public void send(Address toAddress, BasicMessage message);
 public void send(Address toAddress, Address toContactAddress, BasicMessage message)
 }}}
 
-The difference between these two method is that the second one use toContactAddress parameter as real destination address and the first one is keept only ad reference. In particular this is useful for peer behind a NAT that advertise as contact address a different ip:port compared their original one where they can receive incoming messages without firewall or NAT issues.
+The difference between these two method is that the second one use toContactAddress parameter as real destination address and the first one is keept only as reference. In particular this is useful for peer behind a NAT that advertise as contact address a different ip:port compared their original one where they can receive incoming messages without firewall or NAT issues.
    

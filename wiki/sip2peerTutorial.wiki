@@ -35,23 +35,41 @@ public SimplePeer(String pathConfig) {
 }
 }}}
 
-Extending Peer Class implies that SimplePeer class has to override to fundamental method used by the library to notifie the result of a delivery procedure for a specific message. Respectively these functions are called when there is an error in message's delivery and otherwise when the message is correctly sent to the target node.
+Extending Peer Class the developer can to override different fundamental methods from the base class. The main important functions that should be override for the message exchange and for the communication are the following:
 
 {{{
+
+@Override
+protected void onReceivedMsg(String peerMsg, Address sender, String contentType) {
+	super.onReceivedMsg(peerMsg, sender, contentType);
+        ...
+}
+
+@Override
+protected void onReceivedJSONMsg(JSONObject jsonMsg, Address sender) {
+	super.onReceivedJSONMsg(jsonMsg, sender);
+        ...
+}
+
 @Override
 protected void onDeliveryMsgFailure(String peerMsgSended, Address receiver,String contentType) {
-		...
+	....	
 }
 
 @Override
 protected void onDeliveryMsgSuccess(String peerMsgSended, Address receiver,String contentType) {
-              ...
+        ....      
 }
 }}}
 
-Two important methods inherited from the base class are the *send()* functions. They allows to send a message to a destination specified through an address:
+These method are called when the node receive a message (String or JSON based) or if a message delivery is correctly performed or if there are some errors.  
+
+Three important methods inherited from the base class are the *send()* functions. They allows to send a message to a destination specified through an address:
 
 {{{
+
+
+
 public void send(Address toAddress, BasicMessage message);
 
 public void send(Address toAddress, Address toContactAddress, BasicMessage message)
@@ -59,5 +77,12 @@ public void send(Address toAddress, Address toContactAddress, BasicMessage messa
 
 The difference between these two method is that the second one use toContactAddress parameter as real destination address and the first one is keept only as reference. This is useful in scenarios where a peer behind a NAT advertises as contact address a specific ip:port different form the original one and where it can receive incoming messages without firewall or NAT issues.
 
-Message definition and management in sip2peer by default is done using JSON format ([http://www.json.org/ http://www.json.org/])
+Message definition and management in sip2peer by default is done using JSON format ([http://www.json.org/ http://www.json.org/]) but the design it open to allows new format as for example XML. In this tutorial we are focused to use the JSON feature both for message definition and exchange. For this reason we will use the appropriate send methods and onReceiveJSONMsg function.
+
+Given that the base class used to define a message that could be easily transformed in a JSON string is *BaseMessage* that defines a general structure made bye a:
+ * long timestamp
+ * String type
+ * Payload payload
+
+Payload in another base class of the library that defines a data structure of  key/value for the message (implements an Hashtable). The class permits different approach to create a payload, through constructors and methods indeed and is also  possible to add and remove parameters from it. Detailed information are available 
    

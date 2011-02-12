@@ -1,14 +1,18 @@
-#summary One-sentence summary of this page.
 #labels Featured,tutorial,sip2peer
+=sip2peer Tutorial=
 
-= Introduction =
+sip2peer is an open-source SIP-based middleware for the implementation of any distributed and peer-to-peer application or overlay without constrains on peer/node nature (traditional PC or mobile nodes) and specific architecture.
 
-Add your content here.
+Main characteristics are:
 
+Multiplatform nature
+Simple communication API with notification system
+SIP-Based platform
+NAT traversal management
+Efficient, Scalable and Configurable structure
 
-= Details =
+*Supported Platform*
 
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+At this moment sip2peer is available for Java SE and Android platforms, but we are working on the iOS release.
+
+==Tutorial==

@@ -267,4 +267,10 @@ Network Address Translation ([http://en.wikipedia.org/wiki/Network_address_trans
 Nowadays NAT is a very common element in computer networking and in particular for peer-to-peer application could represent a very important issue for the communication.
 
 In VoIP (Voice over Internet Protocol) network a device that is regularly deployed and used also to solve NAT traversal problem is called Session Border Controller ([http://en.wikipedia.org/wiki/Session_border_controller SBC]). 
-Being sip2peer based on SIP protocol, SBC represent a natural and easily way to solve that  
+Being sip2peer based on SIP protocol, SBC represents a natural and easily way to solve NAT traversal problems. 
+
+Shortly we can say that in our specific case SBC is a node with public ip that allows to a generic peer to check if it is behind a NAT and to request (if necessary) a public ip and port that can be used by the requesting node as contact address and that can be advertised to other peers.
+
+sip2peer library natively include an SBC implementation (sip2peerSBC.zip) 
+
+ 

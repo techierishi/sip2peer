@@ -80,6 +80,14 @@ Four important methods  are inherited from the base class providing the appropri
 The difference between these methods is first of all that two of them (1,2) don't use our JSON based message approach but allows the developer to send a generic String to the destination whereas the others use our implementation of a base message as content. 
 Another main difference among these functions is that method 3 and 4 use "toContactAddress" in addition to "toAddress" parameter. Contact address represents the real destination address of the target node while the first one is keept only as reference. This is useful in different scenarios where a peer behind a NAT advertises as contact address a specific ip:port different form the private one where it can receive incoming messages without firewall or NAT issues.
 
+Extended Peer class also provides the following useful instances:
+ * *PeerDescriptor*: a simple structure to keep information about node like:
+   * name (loaded from configuration file)
+   * key
+   * address
+   * contactAddress
+ * *PeerListManager*: extends Hashtable and is used to hold  peer descriptor of known nodes. 
+
 Message definition and management in sip2peer by default is done using JSON format ([http://www.json.org/ http://www.json.org/]) but the design is open to allows new format as for example XML for the communication. 
 
 In this tutorial we are focused to use the JSON feature both for message definition and exchange because it is more simple to define, parse, send and un-parse a generic message. For this reason we will use the appropriate methods associated with JSON and in particular:
@@ -93,4 +101,6 @@ The base class used to define a message that could be easily transformed in a JS
  * Payload payload
 
 Payload in another base class of the library that defines a data structure of  key/value for the message (implements an Hashtable). The class permits different approach to create a payload, through constructors and methods indeed and is also  possible to add and remove parameters from it. Detailed information are available in the JAVA Doc of the project.
+
+For example if we want to create 
    

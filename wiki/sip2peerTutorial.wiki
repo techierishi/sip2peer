@@ -219,8 +219,7 @@ Generally the main useful field for a node are:
  * format_message= by default is "json" but could be also "text"
  * sbc: ip:port of the available sbc
  * keepalive_time: keep alive time value
- * debug_level: 0 or 1 to hide or activate debug logs
-
+ 
 A configuration file has a simple structure of "key=value" with # to comment the line.
 A useful example could be:
 
@@ -229,7 +228,6 @@ peer_name=kate
 #format_message=json
 sbc=160.78.28.112:6067
 keepalive_time=5000
-debug_level=1
 }}}
 
 The same configuration can be obtained by code in the following way:

@@ -118,7 +118,7 @@ public class PingMessage extends BasicMessage {
 }
 }}}
 
-The same approach can be used to create a message to send the peer list.
+The same approach can be used to create a message to send the peer list or for the JoinMessage.
 
 {{{
 public class PeerListMessage extends BasicMessage {
@@ -130,11 +130,35 @@ public class PeerListMessage extends BasicMessage {
 		
 	}
 }
+
+public class JoinMessage extends BasicMessage{
+	
+	private int numPeerList;
+	
+	
+	public static final String MSG_PEER_JOIN="peer_join"; 
+
+	public JoinMessage(PeerDescriptor peerDesc) {
+		
+		super(MSG_PEER_JOIN, new Payload(peerDesc));
+		setNumPeerList(0);
+	}
+
+	public int getNumPeerList() {
+		return numPeerList;
+	}
+
+	public void setNumPeerList(int numPeerList) {
+		this.numPeerList = numPeerList;
+	}
+}
+
 }}}
 
 As already described transmission of BasicMessage through send method 3 or 4 implies that message object is converted into a JSON Object and sent as a JSON format string. Citing the JSON library that we are using at the moment, the JSONObject constructor uses bean getters. It reflects on all of the public methods of the object. For each of the methods with no parameters and a name starting
 with "get" or "is" followed by an uppercase letter, the method is invoked, and a key and the value returned from the getter method are put into the new JSONObject.
 The key is formed by removing the "get" or "is" prefix. If the second remaining character is not upper case, then the first character is converted to lower case. For example, if an object has a method named "getName", and if the result of calling object.getName() is "Larry Fine", then the JSONObject will contain "name": "Larry Fine".   
+For this reason as showed in the JoinMessage class is mandatory to implement get methods to expose those parameters that we want to include in the JSON object representing the message. This rule is valid also not only for the Message instance but also for each kind of Object added in the Payload.
 
 It is also possible to explicitly add element to the payload as for this example of ACK Message:
 
@@ -154,3 +178,13 @@ public class AckMessage extends BasicMessage  {
 }
 }}}  
 
+In order to complete our simple peer class we just need add a function that allows to send a JoinMessage to a destination address.
+
+{{{
+public void joinToPeer(String toAddress, String contactAddress){
+
+		JoinMessage peerMsg = new JoinMessage(peerDescriptor);
+		
+		send(new Address(toAddress), new Address(contactAddress), peerMsg);
+}
+}}}

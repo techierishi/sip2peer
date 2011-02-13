@@ -259,3 +259,12 @@ debug_level=1
 }}}
 
 For detailed information of other SIP parameter we refer to mjSIP details on the official website on in the JAVA Doc.
+
+=== NAT Management ===
+
+Network Address Translation ([http://en.wikipedia.org/wiki/Network_address_translation NAT])  is the process of modifying network address information in datagram (IP) packet headers while in transit across a traffic routing device for the purpose of remapping one IP address space into another. Is a technique that hides an entire IP address space, usually consisting of private network IP addresses (RFC 1918), behind a single IP address in another, often public address space.
+
+Nowadays NAT is a very common element in computer networking and in particular for peer-to-peer application could represent a very important issue for the communication.
+
+In VoIP (Voice over Internet Protocol) network a device that is regularly deployed and used also to solve NAT traversal problem is called Session Border Controller ([http://en.wikipedia.org/wiki/Session_border_controller SBC]). 
+Being sip2peer based on SIP protocol, SBC represent a natural and easily way to solve that  

@@ -258,4 +258,4 @@ keepalive_time=5000
 debug_level=1
 }}}
 
-For the other we refere to mjSIP details on the official website on in the JAVA Doc.
+For detailed information of other SIP parameter we refer to mjSIP details on the official website on in the JAVA Doc.

@@ -100,9 +100,9 @@ The base class used to define a message that could be easily transformed in a JS
  * String type
  * Payload payload
 
-Payload in another base class of the library that defines a data structure of  key/value for the message (implements an Hashtable). The class permits different approach to create a payload, through constructors and methods indeed and is also  possible to add and remove parameters from it. Detailed information are available in the JAVA Doc of the project.
+Payload in another base class of the library that defines a data structure of  key/value for the message (implements an Hashtable). The class permits different approach to create a payload, through constructors and methods. It is also possible to directly add and remove parameters from it. Detailed information are available in the JAVA Doc of the project.
 
-For example if we want to create a simple PING Message to send the node's PeerDescriptor to another active user we just need to extend BasicMessage class redefining only the constructor according to our needs. The result class will be:
+If  for example we want to create a simple PING Message to send the node's PeerDescriptor to another active user we just need to extend BasicMessage class redefining the constructor according to our needs. The result class will be:
 
 {{{
 public class PingMessage extends BasicMessage {

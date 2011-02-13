@@ -243,7 +243,7 @@ It is also possible for the developer to define his own class per additional con
 
 Additional SIP configuration for the node are available only by file and the some additional field that can be used are:
 
-* via_addr:  contains the desired ip address for the node or the "AUTO-CONFIGURATION" to automatically select the listening interface  
+ * via_addr:  contains the desired ip address for the node or the "AUTO-CONFIGURATION" to automatically select the listening interface  
  * host_port: node's port. 
 
 A configuration file with SIP parameters is:

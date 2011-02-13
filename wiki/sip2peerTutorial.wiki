@@ -135,3 +135,22 @@ public class PeerListMessage extends BasicMessage {
 As already described transmission of BasicMessage through send method 3 or 4 implies that message object is converted into a JSON Object and sent as a JSON format string. Citing the JSON library that we are using at the moment, the JSONObject constructor uses bean getters. It reflects on all of the public methods of the object. For each of the methods with no parameters and a name starting
 with "get" or "is" followed by an uppercase letter, the method is invoked, and a key and the value returned from the getter method are put into the new JSONObject.
 The key is formed by removing the "get" or "is" prefix. If the second remaining character is not upper case, then the first character is converted to lower case. For example, if an object has a method named "getName", and if the result of calling object.getName() is "Larry Fine", then the JSONObject will contain "name": "Larry Fine".   
+
+It is also possible to explicitly add element to the payload as for this example of ACK Message:
+
+{{{
+public class AckMessage extends BasicMessage  {
+
+	public static final String ACK_MSG="ack"; 
+	
+	public AckMessage(String status, String msg) {
+		super();
+		Payload payload = new Payload();
+		payload.addParam("status", status);
+		payload.addParam("msg", msg);	
+		this.setType(ACK_MSG);
+		this.setPayload(payload);
+	}	
+}
+}}}  
+

@@ -115,7 +115,20 @@ public class PingMessage extends BasicMessage {
 		super(MSG_PEER_PING, new Payload(peerDesc));
 	
 	}
+}
+}}}
 
+The same approach can be used to create a message to send the peer list.
+
+{{{
+public class PeerListMessage extends BasicMessage {
+
+	public static final String MSG_PEER_LIST="peer_list"; 
+
+	public PeerListMessage(PeerListManager peerList) {
+		super(MSG_PEER_LIST, new Payload(peerList));
+		
+	}
 }
 }}}
    

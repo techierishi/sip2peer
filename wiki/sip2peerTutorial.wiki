@@ -35,6 +35,17 @@ public SimplePeer(String pathConfig) {
 }
 }}}
 
+Different constructors are available with different parameters and configuration:
+
+{{{
+1) public Peer(String pathConfig, String key);
+2) public Peer(String pathConfig, String key, String peerName, int peerPort);
+3) public Peer(String pathConfig, String key, String peerName, int peerPort, BasicParser parser);
+4) public Peer(String pathConfig, String key, BasicParser parser);
+}}} 
+
+In particular in this tutorial we are focused on number 1 and 2 that allow to specify a configuration file with node parameters (details about configuration file is provided later in this tutorial) or additionally pass the peer port.  
+
 Extending *Peer* Class the developer can to override different fundamental methods from the base class. The main important functions that should be override for the message exchange and for the communication are the following:
 
 {{{
@@ -197,14 +208,13 @@ public static void main(String[] args) {
 }
 }}}
 
+
 === Node Configuration ===
 
 Peer class provides by default an object to configure main parameters of the node. These values can be loaded from the file specified in the object constructor as first parameter or through code calling the appropriate methods.
 
 Generally the main useful field for a node are:
 
- * via_addr:  contains the desired ip address for the node or the "AUTO-CONFIGURATION" to automatically select the listening interface  
- * host_port=used port by the peer
  * peer_name=name of the peer advertised in its descriptor
  * format_message= by default is "json" but could be also "text"
  * sbc: ip:port of the available sbc
@@ -215,8 +225,6 @@ A configuration file has a simple structure of "key=value" with # to comment the
 A useful example could be:
 
 {{{
-via_addr=AUTO-CONFIGURATION 
-host_port=5075
 peer_name=kate
 #format_message=json
 sbc=160.78.28.112:6067
@@ -232,3 +240,22 @@ peer.nodeConfig.sbc = "160.78.28.112:6067";
 }}}
 
 It is also possible for the developer to define his own class per additional configuration parameter. For the information it is possible to read the code of PeerConfig.java and its usage in FullPeer.java both available in the example zip archive. 
+
+Additional SIP configuration for the node are available only by file and the some additional field that can be used are:
+
+* via_addr:  contains the desired ip address for the node or the "AUTO-CONFIGURATION" to automatically select the listening interface  
+ * host_port: node's port. 
+
+A configuration file with SIP parameters is:
+
+{{{
+via_addr=AUTO-CONFIGURATION 
+host_port=5075
+peer_name=kate
+#format_message=json
+sbc=160.78.28.112:6067
+keepalive_time=5000
+debug_level=1
+}}}
+
+For the other we refere to mjSIP details on the official website on in the JAVA Doc.

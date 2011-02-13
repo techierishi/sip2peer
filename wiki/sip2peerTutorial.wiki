@@ -235,6 +235,8 @@ The same configuration can be obtained by code in the following way:
 {{{
 SimplePeer peer = new SimplePeer("config/"+args[0]);
 peer.nodeConfig.sbc = "160.78.28.112:6067";
+peer.nodeConfig.peer_name="kate";
+peer.nodeConfig.keepalive_time=5000;
 }}}
 
 It is also possible for the developer to define his own class per additional configuration parameter. For the information it is possible to read the code of PeerConfig.java and its usage in FullPeer.java both available in the example zip archive. 

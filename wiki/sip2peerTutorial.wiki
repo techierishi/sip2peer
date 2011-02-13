@@ -178,7 +178,7 @@ public class AckMessage extends BasicMessage  {
 }
 }}}  
 
-In order to complete our simple peer class we just need add a function that allows to send a JoinMessage to a destination address.
+In order to complete our simple peer class we just need add a function that allows to send a JoinMessage to a destination address and define the main to execute.
 
 {{{
 public void joinToPeer(String toAddress, String contactAddress){
@@ -186,5 +186,13 @@ public void joinToPeer(String toAddress, String contactAddress){
 		JoinMessage peerMsg = new JoinMessage(peerDescriptor);
 		
 		send(new Address(toAddress), new Address(contactAddress), peerMsg);
+}
+
+public static void main(String[] args) {
+
+	if(args.length>0){
+			SimplePeer peer = new SimplePeer("config/"+args[0]);
+			peer.joinToPeer(args[1], args[2]);
+        }
 }
 }}}

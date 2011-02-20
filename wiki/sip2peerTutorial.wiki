@@ -303,3 +303,42 @@ init_port=6080
 debug_level=0
 }}}
  
+=== Peer & NAT Management ===
+
+
+In order to manage NAT on peer side it is only necessary to set the ip address and port of one of available SBC servers (with public IP) and then invoke natively method provided by Peer class called checkNAT();
+
+This function starts the procedure with the SBC to verify if the requesting node is behind a NAT and if it is necessary to request a public couple ip:port. If it is the case the library automatically request a public address and sets it in the contactAddress (CA) parameter of the peer. Since that moment the peer can advertise its CA to other peers becoming reachable from the outside world. 
+
+{{{
+	public SimplePeer(String pathConfig) {
+		super(pathConfig, "a5ds465a465a45d4s64d6a");
+		this.checkNAT();
+
+	}
+}}}
+
+
+sip2peer library provide also all needed methods to manually manage the interaction with the SBC if it is strictly necessary for the developer. In particular requestPublicAddress() allows to directly request a public address to the SBC without any NAT checks and onReceive methods if override allows to intercept the communication between the node and the SBC.
+
+{{{
+	/**
+	 * Request public address from Session Border Controller. Send REQUEST_PORT message to Session Border Controller
+	 */
+
+	public void requestPublicAddress(){...}
+
+         /**
+	 * When a new message is received from Session Border Controller
+	 * 
+	 * @param SBCMsg message sent from SBC
+	 */
+	protected abstract void onReceivedSBCMsg(String SBCMsg);
+
+	/**
+	 * When the Contact Address of the peer is received from SBC by its response
+	 * 
+	 * @param contactAddress
+	 */
+	protected abstract void onReceivedSBCContactAddress(Address contactAddress);
+}}}

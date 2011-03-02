@@ -1,15 +1,15 @@
 #labels Featured,tutorial,sip2peer
 =sip2peer Tutorial=
 
-sip2peer is an open-source SIP-based middleware for the implementation of any distributed and peer-to-peer application or overlay without constrains on peer/node nature (traditional PC or mobile nodes) and specific architecture.
+sip2peer is an open-source SIP-based middleware for the implementation of distributed and peer-to-peer applications or overlay, without constrains on device nature (fixed/mobile) and specific architecture.
 
-Main characteristics are:
+Main features are:
 
  * Multiplatform nature
  * Simple communication API with notification system
- * SIP-Based platform
+ * SIP-based platform
  * NAT traversal management
- * Efficient, Scalable and Configurable structure
+ * Efficient, scalable and configurable structure
 
 *Supported Platform*
 
@@ -17,17 +17,17 @@ At this moment sip2peer is available for Java SE and Android platforms, but we a
 
 ==Java/Android Tutorial==
 
-This tutorial shows what are the main element of the library, how to create a simple peer that interacts with the others. We will analyze also the problem of NAT traversal and how to easily manage it with sip2peer. The code of this example and others more complex are available in the Sip2PeerExample.zip in the Download page.
+This tutorial shows the main elements of the library, and how to create a simple peer that interacts with other peers. We analyze also the problem of NAT traversal and show how to address it with sip2peer. The code of this example and others (more complex) is available in Sip2PeerExample.zip in the Download page.
 
-As mentioned before the Java and the Android implementation of the library are based on the java SIP stack called mjSIP [http://www.mjsip.org http://www.mjsip.org] that allows to manage the exchange of SIP messages or multimedia streams. 
+As mentioned before, the Java and the Android implementation of the library are based on the java SIP stack called MjSip [http://www.mjsip.org http://www.mjsip.org] that allows to manage the exchange of SIP messages or multimedia streams. 
 
-Creating our own peer class using sip2peer is extremely simple and it is only necessary to extend the Class called *Peer*. In our case we have:
+Creating our own peer class using sip2peer is extremely simple and it is only necessary to extend the Class called *Peer*. In this example we have:
 
 {{{ 
 public class SimplePeer extends Peer  
 }}}
 
-Class's constructor has to call the super method with  the path of peer configuration file (detailed information later in this tutorial) and the unique key of the peer in the network.
+The class constructor has to call the super method with  the path of peer configuration file (for detailed information about it, look below in this tutorial) and the unique key of the peer in the network.
 
 {{{
 public SimplePeer(String pathConfig) {
@@ -44,9 +44,9 @@ Different constructors are available with different parameters and configuration
 4) public Peer(String pathConfig, String key, BasicParser parser);
 }}} 
 
-In particular in this tutorial we are focused on number 1 and 2 that allow to specify a configuration file with node parameters (details about configuration file is provided later in this tutorial) or additionally pass the peer port.  
+In particular in this tutorial we focus on number 1 and 2, that allow to specify a configuration file with node parameters and the peer port.  
 
-Extending *Peer* Class the developer can to override different fundamental methods from the base class. The main important functions that should be override for the message exchange and for the communication are the following:
+By extending the *Peer* Class, the developer can override different fundamental methods from the base class. The main important functions that should be overridden for exchanging messages and for communicating are the following:
 
 {{{
 
@@ -73,9 +73,9 @@ protected void onDeliveryMsgSuccess(String peerMsgSended, Address receiver,Strin
 }
 }}}
 
-These methods are called when the node receive a message (String or JSON based) and when a message is correctly delivered or if there are some errors.  
+These methods are called when the node receives a message (String or JSON based) and when a message is correctly delivered, or if there are some errors.  
 
-Four important methods  are inherited from the base class providing the appropriate functions to send a message to a destination node. These method are:
+Four important methods are inherited from the base class, providing the appropriate functions to send a message to a destination node. These methods are:
 
 {{{
 

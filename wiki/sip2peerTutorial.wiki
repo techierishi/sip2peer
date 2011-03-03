@@ -27,13 +27,7 @@ Creating our own peer class using sip2peer is extremely simple and it is only ne
 public class SimplePeer extends Peer  
 }}}
 
-The class constructor has to call the super method with  the path of peer configuration file (for detailed information about it, look below in this tutorial) and the unique key of the peer in the network.
-
-{{{
-public SimplePeer(String pathConfig) {
-		super(pathConfig, "a5ds465a465a45d4s64d6a");
-}
-}}}
+All constructors accept the path of the configuration file (explained later in this tutorial) and additional parameters like node key, peerName and eventually the needed message parser.
 
 Different constructors are available with different parameters and configuration:
 
@@ -46,7 +40,17 @@ Different constructors are available with different parameters and configuration
 
 In particular in this tutorial we focus on number 1 and 2, that allow to specify a configuration file with node parameters and the peer port.  
 
-By extending the *Peer* Class, the developer can override different fundamental methods from the base class. The main important functions that should be overridden for exchanging messages and for communicating are the following:
+The class constructor has to call the super method with  the path of peer configuration file (for detailed information about it, look below in this tutorial) and the unique key of the peer in the network.
+
+{{{
+public SimplePeer(String pathConfig) {
+		super(pathConfig, "a5ds465a465a45d4s64d6a");
+}
+}}}
+
+Sip2peer supports two message formats. It is possible to manage simple text message containing any kind of information like raw data or XML and it is also possible to natively use JSON format. Following this scalable approach, the Peer class provides all needed methods to send and receive messages allowing the developer to select the best solution according to his/her protocol and overlay.
+
+The following methods can be overridden and are automatically called when the node receives a message (1 for String and 2 for JSON based msgs) and when a message is correctly delivered or if there are errors.
 
 {{{
 

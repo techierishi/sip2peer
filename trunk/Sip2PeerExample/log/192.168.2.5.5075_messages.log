@@ -1,0 +1,114 @@
+1297621508430: 18:25:08.430 Sun 13 Feb 2011, 160.78.28.112:6067/udp (355 bytes) sent
+MESSAGE sip:160.78.28.112:6067 SIP/2.0
+Via: SIP/2.0/UDP 192.168.2.5:5075;rport;branch=z9hG4bK02386fed
+Max-Forwards: 70
+To: <sip:160.78.28.112:6067>
+From: <sip:kate@192.168.2.5:5075>;tag=592825904605
+Call-ID: 612207815448@192.168.2.5
+CSeq: 1 MESSAGE
+Expires: 3600
+User-Agent: mjsip 1.7
+Content-Length: 8
+Content-Type: application/text
+
+TEST_NAT-----End-of-message-----
+
+1297621508457: 18:25:08.457 Sun 13 Feb 2011, 192.168.2.5:5075/udp (560 bytes) sent
+MESSAGE sip:kate@192.168.2.5:5075 SIP/2.0
+Via: SIP/2.0/UDP 192.168.2.5:5075;rport;branch=z9hG4bKf2377c3a
+Max-Forwards: 70
+To: <sip:kate@192.168.2.5:5075>
+From: <sip:kate@192.168.2.5:5075>;tag=302403056340
+Call-ID: 761919153009@192.168.2.5
+CSeq: 1 MESSAGE
+Expires: 3600
+User-Agent: mjsip 1.7
+Content-Length: 205
+Content-Type: application/json
+
+{"timestamp":1297621508433,"numPeerList":0,"payload":{"params":{"address":"kate@192.168.2.5:5075","name":"kate","key":"a5ds465a465a45d4s64d6a","contactAddress":"kate@192.168.2.5:5075"}},"type":"peer_join"}-----End-of-message-----
+
+1297621508458: 18:25:08.458 Sun 13 Feb 2011, 192.168.2.5:5075/udp (560 bytes) received
+MESSAGE sip:kate@192.168.2.5:5075 SIP/2.0
+Via: SIP/2.0/UDP 192.168.2.5:5075;rport;branch=z9hG4bKf2377c3a
+Max-Forwards: 70
+To: <sip:kate@192.168.2.5:5075>
+From: <sip:kate@192.168.2.5:5075>;tag=302403056340
+Call-ID: 761919153009@192.168.2.5
+CSeq: 1 MESSAGE
+Expires: 3600
+User-Agent: mjsip 1.7
+Content-Length: 205
+Content-Type: application/json
+
+{"timestamp":1297621508433,"numPeerList":0,"payload":{"params":{"address":"kate@192.168.2.5:5075","name":"kate","key":"a5ds465a465a45d4s64d6a","contactAddress":"kate@192.168.2.5:5075"}},"type":"peer_join"}-----End-of-message-----
+
+1297621508466: 18:25:08.465 Sun 13 Feb 2011, 192.168.2.5:5075/udp (262 bytes) sent
+SIP/2.0 200 OK
+Via: SIP/2.0/UDP 192.168.2.5:5075;branch=z9hG4bKf2377c3a;rport=5075
+To: <sip:kate@192.168.2.5:5075>
+From: <sip:kate@192.168.2.5:5075>;tag=302403056340
+Call-ID: 761919153009@192.168.2.5
+CSeq: 1 MESSAGE
+Server: mjsip 1.7
+Content-Length: 0
+
+-----End-of-message-----
+
+1297621508468: 18:25:08.468 Sun 13 Feb 2011, 192.168.2.5:5075/udp (262 bytes) received
+SIP/2.0 200 OK
+Via: SIP/2.0/UDP 192.168.2.5:5075;branch=z9hG4bKf2377c3a;rport=5075
+To: <sip:kate@192.168.2.5:5075>
+From: <sip:kate@192.168.2.5:5075>;tag=302403056340
+Call-ID: 761919153009@192.168.2.5
+CSeq: 1 MESSAGE
+Server: mjsip 1.7
+Content-Length: 0
+
+-----End-of-message-----
+
+1297621508933: 18:25:08.933 Sun 13 Feb 2011, 160.78.28.112:6067/udp (355 bytes) sent
+MESSAGE sip:160.78.28.112:6067 SIP/2.0
+Via: SIP/2.0/UDP 192.168.2.5:5075;rport;branch=z9hG4bK02386fed
+Max-Forwards: 70
+To: <sip:160.78.28.112:6067>
+From: <sip:kate@192.168.2.5:5075>;tag=592825904605
+Call-ID: 612207815448@192.168.2.5
+CSeq: 1 MESSAGE
+Expires: 3600
+User-Agent: mjsip 1.7
+Content-Length: 8
+Content-Type: application/text
+
+TEST_NAT-----End-of-message-----
+
+1297621509936: 18:25:09.936 Sun 13 Feb 2011, 160.78.28.112:6067/udp (355 bytes) sent
+MESSAGE sip:160.78.28.112:6067 SIP/2.0
+Via: SIP/2.0/UDP 192.168.2.5:5075;rport;branch=z9hG4bK02386fed
+Max-Forwards: 70
+To: <sip:160.78.28.112:6067>
+From: <sip:kate@192.168.2.5:5075>;tag=592825904605
+Call-ID: 612207815448@192.168.2.5
+CSeq: 1 MESSAGE
+Expires: 3600
+User-Agent: mjsip 1.7
+Content-Length: 8
+Content-Type: application/text
+
+TEST_NAT-----End-of-message-----
+
+1297621511938: 18:25:11.938 Sun 13 Feb 2011, 160.78.28.112:6067/udp (355 bytes) sent
+MESSAGE sip:160.78.28.112:6067 SIP/2.0
+Via: SIP/2.0/UDP 192.168.2.5:5075;rport;branch=z9hG4bK02386fed
+Max-Forwards: 70
+To: <sip:160.78.28.112:6067>
+From: <sip:kate@192.168.2.5:5075>;tag=592825904605
+Call-ID: 612207815448@192.168.2.5
+CSeq: 1 MESSAGE
+Expires: 3600
+User-Agent: mjsip 1.7
+Content-Length: 8
+Content-Type: application/text
+
+TEST_NAT-----End-of-message-----
+

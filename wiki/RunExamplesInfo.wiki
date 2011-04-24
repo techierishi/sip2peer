@@ -42,7 +42,8 @@ and to send a JoinMessage to the destination peer
 peer.joinToPeer(args[1], args[2]);
 }}}
 
-I order to run the example use the k.cfg configuration file available in the example folder and run two instances of SimplePeer on the same machine or on two different machines. If you run more then one node on the same machine change properly the port number in the configuration file (host_port=5075) in order to allow the communication.
+In order to run the example you have to create a new configuration file based on k.cfg structure inside the "config" folder of Sip2Peer example.
+The new configuration file will have to following fields in particular to specify the name of the peer and the port on which it is listening.
 
 {{{
 
@@ -62,4 +63,10 @@ debug_level=1
 
 }}}
 
-For example if we have two peers (A and B) running on the same machine (192.168.1.15) we have to run two instance of SimplePeer with two configuration file (based on k.cfg structure) with two different port host port values ( A with port 5075 and B with port 5076). Running arguments for A will be "a_k.cfg 192.168.1.15:5076" 
+If you want to run two instances of SimplePeer on the same machine you have to change properly the port number in the configuration file in order to allow the communication.
+
+For example if we want to run two different Simple Peers (A and B) on the same machine (with IP 192.168.1.15) we have to create two configuration file (a_k.cfg and b_k.cfg) with two different port host port values ( A with port 5075 and B with port 5076) and two different Peer names (Peer_A and Peer_B). 
+Running arguments for Peer_A will be "a_k.cfg Peer_B@192.168.1.15:5076 Peer_B@192.168.1.15:5076" and for Peer_B "b_k.cfg Peer_A@192.168.1.15:5076 Peer_A@192.168.1.15:5075".
+
+If you execute this scenario of two different machine computer A (with IP 192.168.1.15) and computer B (with IP 192.168.1.16) of the same LAN you can keep the same port for the two nodes changing only the peer name field.
+In this second scenario running arguments for Peer_A will be "a_k.cfg Peer_B@192.168.1.16:5075 Peer_B@192.168.1.16:5075" and for Peer_B "b_k.cfg Peer_A@192.168.1.15:5075 Peer_A@192.168.1.15:5075".

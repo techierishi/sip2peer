@@ -65,8 +65,8 @@ debug_level=1
 
 If you want to run two instances of SimplePeer on the same machine you have to change properly the port number in the configuration file in order to allow the communication.
 
-For example if we want to run two different Simple Peers (A and B) on the same machine (with IP 192.168.1.15) we have to create two configuration file (a_k.cfg and b_k.cfg) with two different port host port values ( A with port 5075 and B with port 5076) and two different Peer names (Peer_A and Peer_B). 
+For example if we have different Simple Peers (A and B) on the same machine (with IP 192.168.1.15) we have to create two configuration file (a_k.cfg and b_k.cfg) with two different port host port values ( A with port 5075 and B with port 5076) and two different Peer names (Peer_A and Peer_B). 
 Running arguments for Peer_A will be "a_k.cfg Peer_B@192.168.1.15:5076 Peer_B@192.168.1.15:5076" and for Peer_B "b_k.cfg Peer_A@192.168.1.15:5076 Peer_A@192.168.1.15:5075".
 
-If you execute this scenario of two different machine computer A (with IP 192.168.1.15) and computer B (with IP 192.168.1.16) of the same LAN you can keep the same port for the two nodes changing only the peer name field.
+In order to execute the same scenario on two different machine Computer_A (with IP 192.168.1.15) and Computer_B (with IP 192.168.1.16) of the same LAN you can keep the same port for the two nodes changing only the peer name field.
 In this second scenario running arguments for Peer_A will be "a_k.cfg Peer_B@192.168.1.16:5075 Peer_B@192.168.1.16:5075" and for Peer_B "b_k.cfg Peer_A@192.168.1.15:5075 Peer_A@192.168.1.15:5075".

@@ -26,6 +26,40 @@ protected void onReceivedMsg(String peerMsg, Address sender,String contentType)
 
 The main method contains takes 3 arguments as input:
 
-  * configuration file
+  * name of configuration file
   * address of destination peer
   * contact address of the destination peer
+
+and use these values to instantiate the node with the configuration file 
+
+{{{
+SimplePeer peer = new SimplePeer("config/"+args[0]);
+}}}
+
+and to send a JoinMessage to the destination peer
+
+{{{
+peer.joinToPeer(args[1], args[2]);
+}}}
+
+I order to run the example use the k.cfg configuration file available in the example folder and run two instances of SimplePeer on the same machine or on two different machines. If you run more then one node on the same machine change properly the port number in the configuration file (host_port=5075) in order to allow the communication.
+
+{{{
+
+via_addr=AUTO-CONFIGURATION 
+
+host_port=5075
+
+peer_name=Peer_A
+
+test_address_reachability=no
+
+log_path=log/
+
+keepalive_time=5000
+
+debug_level=1
+
+}}}
+
+For example if we have two peers (A and B) running on the same machine (192.168.1.15) we have to run two instance of SimplePeer with two configuration file (based on k.cfg structure) with two different port host port values ( A with port 5075 and B with port 5076). Running arguments for A will be "a_k.cfg 192.168.1.15:5076" 
